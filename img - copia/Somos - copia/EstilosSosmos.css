@@ -1,0 +1,149 @@
+
+:root {
+    --color-primary: #333;
+
+}
+
+
+.menu-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-buttons .cta-a {
+
+    padding: 0.5rem 1rem;
+    font-weight: 10000; 
+    font-size: 1rem;
+    border-radius: var(--border-r);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para el header */
+.header-landing {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center; /* Distribuye el logo y el menú */
+    
+    padding: 1rem 1rem;
+    background: rgba(106, 141, 163, 0.996);
+    z-index: 1000; /* Asegura que esté encima del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el logo */
+.wrap-logo {
+    position: absolute; 
+    top: 40%;
+    left: 2.5%; /* Mueve el logo completamente a la izquierda */
+}
+
+.wrap-logo img {
+    max-width: 50px; 
+    height: auto; 
+}
+
+/* Menú */
+.menu-header-section ul {
+    display: flex;
+    gap: 1.5em; /* Espaciado entre los elementos del menú */
+    list-style: none; /* Sin viñetas */
+    margin: 0;
+    padding: 10px;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    margin-left: 770px; /* Esto moverá el contenido a la derecha */
+}
+
+.menu-header-section li a {
+    text-decoration: none; 
+    color: var(--main-c); /* Usa el color principal definido */
+    font-size: 1.1rem;
+    font-weight: bold; /* Negrita para mayor visibilidad */
+    transition: color 0.3s ease; /* Transición suave en hover */
+}
+
+.menu-header-section li a:hover {
+    color: #fff; 
+}
+
+/* Logo y navegación adaptables */
+@media (max-width: 768px) {
+    .header-landing {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    }
+
+    .menu-header-section ul {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+.menu-buttons .cta-a:hover {
+    background-color: var(--main-c);
+    /*color: #333;*/
+}
+
+/* Sección principal */
+.about-us-section {
+    padding: 3rem 1rem;
+    background-color: #0f0f0f4b;
+    border-radius: var(--border-r);
+}
+
+.wrap-title-section h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+/* Valores */
+.about-values ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.about-values li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Equipo */
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-r);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: var(--border-r);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.05); /* Crecimiento moderado de la imagen */
+}
+

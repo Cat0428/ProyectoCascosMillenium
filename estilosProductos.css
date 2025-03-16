@@ -1,0 +1,297 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px  20px;
+    text-align: center;
+}
+
+main{
+    padding: 20px;
+}
+
+.catalogo{
+    margin-top: -30px;
+}
+
+#productos {
+    margin-bottom: 30px;
+}
+
+#productos {
+    display:grid; /* Activa el diseño en cuadrícula */
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas del mismo tamaño */
+    grid-template-rows: repeat(4, auto);
+    gap: 10px; /* Espaciado entre los productos */
+    margin-bottom: 30px;
+    width: 100%;
+    transition: transform 0.3s ease, box shadow 0.3s ease;
+    
+    
+}
+
+.producto.resaltado{
+    transform: scale(1.1);
+    box-shadow: 0  4px  15px rgb(0, 0, 0);
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Alineación vertical de los elementos */
+    align-items: center;
+    justify-content: center;
+    width: 70%; /* Ajusta el ancho al tamaño de la celda */
+    height: auto; /* Altura dinámica según contenido */
+    margin-top: 50px;
+    
+    
+}
+
+.producto img {
+    width: 150px; /* Imagen más grande */
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Espacio entre la imagen y el resto */
+}
+
+.producto h3 {
+    margin: 10px 0; /* Espaciado alrededor del título */
+    font-size: 1.2rem; /* Tamaño del texto */
+    text-align: center; /* Centra el título */
+}
+
+.producto p {
+    margin: 10px 0; /* Espaciado para el precio */
+    font-weight: bold; /* Resalta el precio */
+    text-align: center;
+}
+
+.btn-comprar {
+    background-color: #045f04;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Botón más grande */
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio superior */
+    font-size: 1rem;
+}
+
+.btn-comprar:hover {
+    background-color: #04a004fd;
+}
+
+#carrito-icon {
+    position: fixed; /* Posicionamiento fijo en la pantalla */
+    top: 220px; /* Espaciado desde la parte superior */
+    right: 20px; /* Espaciado desde la parte derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    font-size: 2rem;
+    color: #007b00;
+    cursor: pointer;
+    z-index: 1000;
+    transition: color 0.3s ease;
+}
+
+#icono-carrito {
+    font-size: 2rem; /* Tamaño grande para el ícono */
+    color: #007bff; /* Color principal del ícono */
+    cursor: pointer; /* Indicador de que se puede hacer clic */
+    transition: color 0.3s ease;
+}
+
+#carrito-icon:hover {
+    color: #0056b3;
+}
+#carrito-contenido {
+    flex: 1; /* El contenido ocupa el espacio restante */
+    padding-left: 20px; /* Separación entre el ícono y el contenido */
+}
+
+#carrito-popup h3{
+    font-size: 1.2rem;
+    margin: 0  0  10px;
+    color: #333;
+}
+
+#lista-carrito {
+    list-style: none; /* Eliminar los puntos de lista */
+    padding: 0;
+    margin: 0 0 15px;
+    max-height: 150px;
+    overflow: auto;
+}
+
+#lista-carrito li {
+    display: flex; /* Usamos Flexbox para alinear los elementos del carrito */
+    justify-content: space-between; /* Distribuir el contenido de cada item */
+    padding: 10px 0; /* Espaciado entre los elementos */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre productos */
+}
+
+#total {
+    font-size: 1.1rem; /* Tamaño de texto ligeramente mayor para el total */
+    font-weight: bold; /* Hacer el total más destacado */
+    color: #333; /* Color oscuro para el texto */
+}
+
+#cerrar-carrito{
+    display: block;
+    width: 100px;
+    padding: 10px 15px;
+    background-color: #007b00;
+    color:#fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#cerrar-carrito :hover{
+    background-color: #0057b3fd;
+}
+
+/* Estilo general del pie de página */
+#pie-pagina {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de "Sobre Nosotros" */
+.informacion {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.informacion h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.informacion p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sección de "Enlaces Rápidos" */
+.enlaces {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.enlaces h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.enlaces ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces ul li {
+    margin-bottom: 8px;
+}
+
+.enlaces ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.enlaces ul li a:hover {
+    color: #007bff;
+}
+
+/* Sección de "Contacto" */
+.contacto {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.contacto h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sección de Redes Sociales */
+.redes-sociales {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.redes-sociales h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Sección de derechos de autor */
+.copyright {
+    background-color: #222;
+    padding: 10px 0;
+    color: #bbb;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacion, .enlaces, .contacto, .redes-sociales {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+

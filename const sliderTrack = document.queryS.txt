@@ -1,0 +1,30 @@
+const sliderTrack = document.querySelector('.slider-track');
+const sliderItems = document.querySelectorAll('.item-productos-section');
+const itemWidth = sliderItems[0].offsetWidth; // Ancho de un elemento
+let currentIndex = 0;
+
+// Clonamos los elementos al principio y al final para el efecto de bucle
+sliderTrack.innerHTML += sliderTrack.innerHTML; // Duplicamos los elementos
+const totalItems = sliderTrack.children.length; // Nuevo número total de elementos
+
+// Ajustar el ancho total de la pista para soportar los elementos duplicados
+sliderTrack.style.width = `${totalItems * itemWidth}px`;
+
+// Configurar el slider infinito
+function moveSlider() {
+    currentIndex++;
+    sliderTrack.style.transition = 'transform 0.5s ease-in-out';
+    sliderTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+
+    // Cuando llegamos al final, reiniciamos sin transición
+    if (currentIndex >= totalItems / 2) {
+        setTimeout(() => {
+            sliderTrack.style.transition = 'none';
+            currentIndex = 0;
+            sliderTrack.style.transform = `translateX(0px)`;
+        }, 500); // Coincide con la duración de la transición
+    }
+}
+
+// Inicia el movimiento automático
+setInterval(moveSlider, 3000)

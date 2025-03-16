@@ -1,0 +1,180 @@
+:root {
+    --main-c: #333;
+}
+
+/* Fondo de la página excluyendo el header */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--main-c);
+}
+.intro
+{
+    color: rgb(243, 236, 236);
+    text-decoration:solid;
+    background-color: rgba(0, 0, 0, 0.212);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: larger;
+}
+
+.TextoN
+{
+    color: rgb(243, 236, 236);
+    text-decoration:solid;
+    background-color: rgba(0, 0, 0, 0.212);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: larger;
+}
+
+footer
+{
+    background-color: #000; 
+    color: #fff; 
+    text-align: center; 
+    padding: 1rem; 
+    font-size: 1rem;
+}
+.header-landing {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right; /* Distribuye el logo y el menú */
+    padding: 1rem 1rem;
+    background: rgba(106, 141, 163, 0.996);
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header-section ul {
+    position: relative;
+    background-color:#0f0f0f00 ;
+    left: -550px;
+    display: flex; 
+    gap: 1.1rem; 
+    list-style: none; 
+    margin: 0;
+    padding: 15px;
+}
+
+.menu-header-section li a {
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-header-section li a:hover {
+    color: #fff;
+}
+
+.menu-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.menu-buttons a {
+    text-decoration: none;
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.menu-buttons a:hover {
+    background: #d45545;
+}
+
+
+/* Contenido principal debajo del header */
+main {
+    padding-top: 100px; 
+    background-image: url(vista-panoramica-medellin.jpg);
+    background-size:contain; 
+    background-position:center;
+    background-attachment: fixed; 
+    height: 100%; 
+    margin: 0;
+}
+
+.carousel-container-text {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(106, 141, 163, 0.996);
+    padding: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item-text {
+    min-width: 100%;
+    height: 600px; 
+    object-fit:fill; 
+    flex-shrink: 5; 
+}
+
+button#prev-text,
+button#next-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+button#prev-text {
+    left: 10px;
+}
+
+button#next-text {
+    right: 10px;
+}
+
+.carousel-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.text-slide {
+    display: none;
+}
+
+.text-slide.active {
+    display: block;
+}
+

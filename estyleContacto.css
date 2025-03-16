@@ -1,0 +1,183 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+  
+}
+
+/* Header */
+.site-header {
+    background-color:#333;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+}
+
+.site-header h1 {
+    font-size: 2.5em;
+}
+
+.site-header p {
+    font-size: 1.2em;
+}
+
+.site-header ul{
+    position: relative;
+    background-color: #fffefe00;
+    left: 1100px;
+    display: flex; /* Organiza los elementos en fila */
+    gap: 1.5rem; /* Espaciado entre los elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin-top: -20px;
+    padding: 0;
+    color: white;
+   
+}
+
+.site-header a{
+    text-decoration: none; /* Sin subrayado */
+    color: #fffcfc; /* Color del texto */
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 20px;
+}
+
+/* Información de contacto */
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.contact-info li {
+    margin: 10px 0;
+}
+
+/* Collage */
+.collage-section {
+    position: relative;
+    display: flex;
+    justify-content: center;   /* Centra el formulario horizontalmente */
+    align-items: center;       /* Centra el formulario verticalmente */
+    height: 100vh;             /* Hace que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  .collage-container {
+    display: grid;             /* Usa Grid para las imágenes del collage */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Crea una cuadrícula flexible */
+    grid-template-rows: auto;
+    grid-gap: 20px;            /* Espacio entre las imágenes */
+    width: 100%;               /* Las imágenes ocupan todo el contenedor */
+    height: 100%;              /* Las imágenes ocupan toda la altura */
+    position: relative;        /* Necesario para asegurar que el formulario se ubique correctamente */
+  }
+
+/* Estilo para las imágenes del collage */
+.collage-image {
+    width: 150%; /* Las imágenes ocupan todo el ancho de su celda */
+    height: 500px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Hace que la imagen cubra su celda sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados para un efecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto de hover para las imágenes */
+.collage-image:hover {
+    transform: scale(1.05) rotate(10deg); /* Aumenta ligeramente el tamaño de la imagen y la rota */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Animación cuando la imagen es visible */
+.collage-image.visible {
+    opacity: 1; /* Aparece la imagen */
+    transform: translateY(0); /* Se desplaza hacia su posición original */
+}
+
+
+
+
+/* Formulario de contacto */
+.contact-form {
+    position: absolute;        /* El formulario se coloca encima del collage */
+    top: 65%;                   /* Centra verticalmente */
+    left: 50%;                  /* Centra horizontalmente */
+    transform: translate(-50%, -50%);  /* Ajusta el desplazamiento para el centrado exacto */
+    width: 500px;              /* Ajusta el tamaño del formulario */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.863); /* Fondo blanco semi-transparente para no tapar completamente las imágenes */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  textarea{
+    width: 100%;
+    height: 150px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #038003;
+  }
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

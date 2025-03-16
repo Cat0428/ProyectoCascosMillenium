@@ -1,0 +1,136 @@
+
+html * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer
+{
+    background-color: #000; 
+    color: #fff; 
+    text-align: center; 
+    padding: 5rem; 
+    font-size: 1rem;
+}
+
+.header-landing {
+    position: fixed; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:right; 
+    padding: 1rem 1rem;
+    background: rgba(106, 141, 163, 0.996);
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wrap-logo {
+    position: absolute; 
+    top: 40%; 
+    left: 2.5%;
+}
+
+.wrap-logo img {
+    max-width: 50px; 
+    height: auto;
+}
+/* Menú */
+.menu-header-section ul {
+    position: relative;
+    background-color:#0f0f0f00 ;
+    left: -550px;
+    display: flex;
+    gap: 1.1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.menu-header-section li a {
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-header-section li a:hover {
+    color: #fff; 
+}
+/* Logo y navegación adaptables */
+@media (max-width: 768px) {
+    .header-landing {
+        flex-wrap: wrap; 
+    }
+
+    .menu-header-section ul {
+        flex-direction: column; 
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+.menu-buttons .cta-a:hover {
+    background-color: var(--main-c);
+
+}
+
+/* Sección principal */
+.about-us-section {
+    padding: 3rem 1rem;
+    background-color: #0f0f0f67;
+    border-radius: var(--border-r);
+}
+
+.wrap-title-section h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+/* Valores */
+.about-values ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.about-values li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Equipo */
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(12, 4, 4, 0.404);
+    padding: 1.5rem;
+    border-radius: var(--border-r);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+    width: 100%;
+    height: auto; 
+    border-radius: var(--border-r);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.05); 
+}
+
