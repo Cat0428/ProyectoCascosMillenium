@@ -43,7 +43,7 @@ function actualizarVistaPrevia() {
     // Obtener el valor del estilo seleccionado
     const estilo = estiloSelect.value;
     // Actualizar la imagen del casco según el estilo
-    cascoPreview.src = `img/casco-${estilo}.jpg`; // Asegúrate de que las imágenes estén nombradas correctamente
+    cascoPreview.src = `assets/img/casco-${estilo}.jpg`; // Asegúrate de que las imágenes estén nombradas correctamente
 }
 
 // Función para actualizar el color del casco
