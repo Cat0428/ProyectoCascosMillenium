@@ -2,8 +2,8 @@ body {
     background-color: #fdfcfcfa;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
@@ -73,6 +73,7 @@ body {
 /* Botones de llamada a la acción */
 .wrap-cta {
     margin-top: 20px;
+    
 }
 
 
@@ -80,6 +81,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
+    
     background-color: #007BFF;
     color: #fff;
     text-decoration: none;
@@ -90,6 +92,7 @@ body {
 .cta-a:hover,
 .cta-a-secondary:hover {
     background-color: #0056b3;
+    
 }
 
 .comparison-section {
@@ -166,13 +169,13 @@ li {
 
 .wrap-cta {
     padding: 1.5rem 0;
+    
    
 
 }
 
 .cta-a {
     position: relative;
-    top: -120px;
     color: #f9fafc;
     font-weight: bold;
     font-size: 1.2rem;
@@ -308,6 +311,7 @@ h3 {
     width: 100%;
     overflow: hidden;
     position: relative;
+    
 }
 
 .slider-track {
