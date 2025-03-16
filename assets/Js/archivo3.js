@@ -2,7 +2,7 @@
 const canvas = new fabric.Canvas('canvas');
 
 // Cargar la imagen base de casco
-let cascoImage = new fabric.Image.fromURL('img/casco-simple.jpg', function(img) {
+let cascoImage = new fabric.Image.fromURL('/assets/img/casco-simple.jpg', function(img) {
     img.scaleToWidth(300);
     img.scaleToHeight(300);
     canvas.add(img); // Añadir la imagen al lienzo
@@ -19,18 +19,18 @@ function updateImage() {
     // Limpiar el canvas
     canvas.clear();
 
-    let newImage = 'img/casco-simple.jpg'; // Imagen por defecto
+    let newImage = '/assets/img/casco-simple.jpg'; // Imagen por defecto
 
     // Seleccionar el diseño según la opción elegida
     switch (selectedDesign) {
         case 'deportivo':
-            newImage = 'img/casco-deportivo.jpg';
+            newImage = '/assets/img/casco-deportivo.jpg';
             break;
         case 'retro':
-            newImage = 'img/casco-retro.jpg';
+            newImage = '/assets/img/casco-retro.jpg';
             break;
         default:
-            newImage = 'img/casco-simple.jpg';
+            newImage = '/assets/img/casco-simple.jpg';
             break;
     }
 
