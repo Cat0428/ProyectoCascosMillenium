@@ -5,6 +5,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%; /* Asegura que el ancho sea el correcto */
 }
 
 .wrap-two-column {
@@ -73,7 +75,7 @@ body {
     margin-top: 20px;
 }
 
-.cta-a,
+
 .cta-a-secondary {
     display: inline-block;
     padding: 10px 20px;
@@ -169,13 +171,15 @@ li {
 }
 
 .cta-a {
+    position: relative;
+    top: -120px;
     color: #f9fafc;
     font-weight: bold;
     font-size: 1.2rem;
     background-color: #2980b9;
     padding: .5rem 1rem;
     border-radius: var(--border-r);
-   
+    
 }
 
 h1 {
@@ -192,17 +196,19 @@ h3 {
     font-size: 2.2rem;
 }
 
-.header-landing {
-    position: fixed;
+.header-landing { /*parte del logotipo*/
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribuye el logo y el menú */
     padding: 0.5rem 1rem;
     background: #0f0f0f00;
+    
 }
 
-.menu-header-section ul {
-    position: fixed;
+
+.menu-header-section ul { /*fondo de las letras*/
+    position: relative;
     background-color: #fffefe00;
     left: 1100px;
     display: flex; /* Organiza los elementos en fila */
@@ -211,7 +217,9 @@ h3 {
     margin: 0;
     padding: 0;
     color: white;
+    
 }
+
 
 .menu-header-section li a {
     text-decoration: none; /* Sin subrayado */
@@ -219,6 +227,7 @@ h3 {
     font-size: 1.1rem;
     font-weight: bold;
     transition: color 0.3s ease;
+    
 }
 
 
@@ -227,6 +236,7 @@ h3 {
     max-width: 25px;
     height: 100%;
     width: 200%;
+    
 }
 
 .hero-section {
