@@ -1,0 +1,152 @@
+
+/* Variables de colores */
+:root {
+    --color-primary: #333;
+    --color-secondary: #0056b3;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/*Logo empresa*/
+.wrap-logo img{
+    max-width: 100px;
+    height: auto;
+    display: block;
+
+}
+
+.wrap-logo{
+    border: 2px solid red;
+}
+
+/* Header */
+.header-landing {
+    position: fixed;
+    top: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem  1rem;
+    background: #333;
+    color: #333;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1 );
+}
+
+/* Estilos para el contenedor del menú */
+.menu-header-section {
+    padding: 10px 20px;       /* Espaciado interno */
+    margin-top: -20px;         /* Sube el menú 20px */
+    margin-left: 50px;         /* Mueve el menú 50px a la derecha */
+    border-radius: 5px;        /* Bordes redondeados */
+}
+
+/*Menu de linea*/
+.menu-header-section ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-left: 50px;
+    padding: 0;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/*Estilos para los botones del menú*/
+.menu-header-section li a{
+    text-decoration: none;
+    color: #f8f6f6;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-header-section li a:hover {
+   background-color: #077929;
+   color: white;
+}
+
+/*Efeco para evitar que queden clickeados*/
+.menu-header-section li a:focus{
+    outline: none;
+}
+
+/* Sección Quiénes Somos */
+.about-us-section {
+
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+    background-image: url('/assets/img/fondoSomos');
+}
+.wrap-title-section h2 {
+    font-size: 2.8rem;
+    color: var(--color-primary);
+}
+
+/* Contadores */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Equipo */
+.team-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Video */
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Mapa */
+.map-section iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Ocultar contenido extra */
+.hidden {
+    display: none;
+}
