@@ -2,9 +2,11 @@ body {
     background-color: #fdfcfcfa;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%; /* Asegura que el ancho sea el correcto */
 }
 
 .wrap-two-column {
@@ -71,13 +73,15 @@ body {
 /* Botones de llamada a la acción */
 .wrap-cta {
     margin-top: 20px;
+    
 }
 
-.cta-a,
+
 .cta-a-secondary {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
+    
     background-color: #007BFF;
     color: #fff;
     text-decoration: none;
@@ -88,6 +92,7 @@ body {
 .cta-a:hover,
 .cta-a-secondary:hover {
     background-color: #0056b3;
+    
 }
 
 .comparison-section {
@@ -164,22 +169,25 @@ li {
 
 .wrap-cta {
     padding: 1.5rem 0;
+    
    
 
 }
 
 .cta-a {
+    position: relative;
     color: #f9fafc;
     font-weight: bold;
     font-size: 1.2rem;
     background-color: #2980b9;
     padding: .5rem 1rem;
     border-radius: var(--border-r);
-   
+    
 }
 
 h1 {
     font-size: 2.8rem;
+    text-align: center;
 }
 
 h2 {
@@ -191,16 +199,18 @@ h3 {
     font-size: 2.2rem;
 }
 
-.header-landing {
+.header-landing { /*parte del logotipo*/
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribuye el logo y el menú */
     padding: 0.5rem 1rem;
     background: #0f0f0f00;
+    
 }
 
-.menu-header-section ul {
+
+.menu-header-section ul { /*fondo de las letras*/
     position: relative;
     background-color: #fffefe00;
     left: 1100px;
@@ -210,7 +220,9 @@ h3 {
     margin: 0;
     padding: 0;
     color: white;
+    
 }
+
 
 .menu-header-section li a {
     text-decoration: none; /* Sin subrayado */
@@ -218,12 +230,16 @@ h3 {
     font-size: 1.1rem;
     font-weight: bold;
     transition: color 0.3s ease;
+    
 }
+
+
 
 .logo-header {
     max-width: 25px;
     height: 100%;
     width: 200%;
+    
 }
 
 .hero-section {
@@ -295,6 +311,7 @@ h3 {
     width: 100%;
     overflow: hidden;
     position: relative;
+    
 }
 
 .slider-track {
