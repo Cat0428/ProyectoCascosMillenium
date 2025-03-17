@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0 auto;
-    padding: 20px;
+    padding: 80px;
     box-sizing: border-box;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
@@ -76,24 +76,23 @@ body {
     
 }
 
-
+/*
 .cta-a-secondary {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
-    
     background-color: #007BFF;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Corregido */
+    transition: background-color 0.3s ease; 
 }
 
 .cta-a:hover,
 .cta-a-secondary:hover {
     background-color: #0056b3;
     
-}
+}*/
 
 .comparison-section {
     margin-top: 40px;
@@ -196,13 +195,13 @@ li {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega suavidad */
 }
 .Botones_1:hover {
-    transform: scale(1.1); /* Se infla */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.9); /* Se infla */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .Botones_2:hover {
-    transform: scale(1.1); /* Se infla */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.9); /* Se infla */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -221,38 +220,43 @@ h3 {
 }
 
 .header-landing { /*parte del logotipo*/
-    position: absolute;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye el logo y el menú */
-    padding: 0.5rem 1rem;
-    background: #0f0f0f00;
-    
-}
-
-
-.menu-header-section ul { /*fondo de las letras*/
-    position: relative;
-    background-color: #fffefe00;
-    left: 1100px;
-    display: flex; /* Organiza los elementos en fila */
-    gap: 1.5rem; /* Espaciado entre los elementos */
-    list-style: none; /* Elimina los puntos de la lista */
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    padding: 1rem 0;
+    background: #333;
     color: white;
+    z-index: 1000;/* Asegura que esté por encima de otros elementos */
+    
     
 }
+
+.menu-header-section ul { 
+   
+    display: flex; 
+    gap: 2rem; 
+    list-style: none; 
+    
+    
+}   
 
 
 .menu-header-section li a {
-    text-decoration: none; /* Sin subrayado */
-    color: #fffcfc; /* Color del texto */
-    font-size: 1.1rem;
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s ease;
-    
 }
+
+.menu-header-section li a:hover {
+    color: gray;
+}
+
 
 
 
@@ -260,7 +264,7 @@ h3 {
     max-width: 25px;
     height: 100%;
     width: 200%;
-    
+   
 }
 
 .hero-section {
@@ -333,14 +337,15 @@ h3 {
     width: 100%;
     overflow: hidden;
     position: relative;
-
-    
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 
 .item-productos-section {
     flex: 0 0 auto;
