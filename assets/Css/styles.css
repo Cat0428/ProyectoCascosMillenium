@@ -170,11 +170,9 @@ li {
 .wrap-cta {
     padding: 1.5rem 0;
     
-   
-
 }
 
-.cta-a {
+.Botones_1 {
     position: relative;
     color: #f9fafc;
     font-weight: bold;
@@ -182,8 +180,31 @@ li {
     background-color: #2980b9;
     padding: .5rem 1rem;
     border-radius: var(--border-r);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega suavidad */
     
 }
+
+.Botones_2 {
+    position: relative;
+    color: #f9fafc;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #2980b9;
+    padding: .5rem 1rem;
+    border-radius: var(--border-r);
+    top: -180px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega suavidad */
+}
+.Botones_1:hover {
+    transform: scale(1.1); /* Se infla */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Botones_2:hover {
+    transform: scale(1.1); /* Se infla */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 h1 {
     font-size: 2.8rem;
@@ -308,9 +329,11 @@ h3 {
 }
 
 .slider-container {
+    background-color: #94939314;
     width: 100%;
     overflow: hidden;
     position: relative;
+
     
 }
 
