@@ -216,8 +216,9 @@ li {
 /*Fin seccion botones*/
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     text-align: center;
+
 }
 
 h2 {
@@ -239,7 +240,7 @@ h3 {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background: #333;
+    background: #000000;
     color: white;
     z-index: 1000;/* Asegura que esté por encima de otros elementos */
     
@@ -264,7 +265,7 @@ h3 {
 }
 
 .menu-header-section li a:hover {
-    color: gray;
+    color: rgb(255, 174, 0);
 }
 /*FIN SECCION CABECERA*/
 
@@ -283,9 +284,10 @@ h3 {
 /*FIN PORTADA*/
 
 .wrap-hero-section {
+    margin-top: -610px;
     max-width: 600px;
     color: #ffffff;
-    padding: 15%;
+    padding: 4px;
 }
 
 .section {
@@ -580,7 +582,7 @@ button {
 
 footer {
     
-    background-color: #222;
+    background-color: #000000;
     color: #ffffff;
     padding: 20px 0;
     font-family: Arial, sans-serif;
@@ -627,7 +629,7 @@ footer {
   }
   
   .footer-section ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   .footer-bottom {
     text-align: center;
@@ -675,16 +677,16 @@ footer {
     flex: 1;
     padding: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
   }
   
   .newsletter button {
     padding: 8px 15px;
     border: none;
-    background-color: #f39c12;
+    background-color: #333;
     color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
   }
   
   .newsletter button:hover {
