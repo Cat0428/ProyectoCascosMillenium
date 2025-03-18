@@ -1,4 +1,4 @@
-body {
+main,body {
     background-color: #fdfcfcfa;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,7 +8,7 @@ body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
 }
-
+/*
 .wrap-two-column {
     display: flex;
     justify-content: space-between;
@@ -20,24 +20,29 @@ body {
 .wrap-img_two-column {
     flex: 1;
 }
+*/
 
+/*---Interactividad imagen motociclista-----*/
 .interactive-img {
     width: 100%;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Corregido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .interactive-img:hover {
     transform: scale(1.05);
     background-origin: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+/*----hasta aca llega el hover de la imagen---*/    
 
+/*
 .img-caption {
     text-align: center;
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
 }
+*/
 
 /* Lista de características */
 .features-list li {
@@ -70,11 +75,12 @@ body {
     text-align: right;
 }
 
-/* Botones de llamada a la acción */
+/* Botones de llamada a la acción
 .wrap-cta {
     margin-top: 20px;
     
 }
+*/
 
 /*
 .cta-a-secondary {
@@ -94,6 +100,7 @@ body {
     
 }*/
 
+
 .comparison-section {
     margin-top: 40px;
     padding: 20px;
@@ -101,6 +108,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+    
 
 .comparison-grid {
     display: flex;
@@ -165,13 +173,16 @@ ul,
 li {
     list-style: none;
 }
-
+/*
 .wrap-cta {
     padding: 1.5rem 0;
     
 }
+    */
 
-.Botones_1 {
+/*Seccion botones*/
+.Botones_1   {
+    bottom: -40px;
     position: relative;
     color: #f9fafc;
     font-weight: bold;
@@ -179,8 +190,7 @@ li {
     background-color: #2980b9;
     padding: .5rem 1rem;
     border-radius: var(--border-r);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega suavidad */
-    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega suavidad */ 
 }
 
 .Botones_2 {
@@ -203,7 +213,7 @@ li {
     transform: scale(1.9); /* Se infla */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-
+/*Fin seccion botones*/
 
 h1 {
     font-size: 2.8rem;
@@ -219,6 +229,7 @@ h3 {
     font-size: 2.2rem;
 }
 
+/*INICIO SECCION CABECERA*/
 .header-landing { /*parte del logotipo*/
     position: fixed; 
     top: 0; 
@@ -244,7 +255,6 @@ h3 {
     
 }   
 
-
 .menu-header-section li a {
     text-decoration: none; 
     color: white; 
@@ -256,17 +266,9 @@ h3 {
 .menu-header-section li a:hover {
     color: gray;
 }
+/*FIN SECCION CABECERA*/
 
-
-
-
-.logo-header {
-    max-width: 25px;
-    height: 100%;
-    width: 200%;
-   
-}
-
+/*SECCION PORTADA*/
 .hero-section {
     height: 90vh;
     background: url(/assets/img/fondocasco.jpg);
@@ -278,10 +280,11 @@ h3 {
     display: flex;
     align-items: center;
 }
+/*FIN PORTADA*/
 
 .wrap-hero-section {
     max-width: 600px;
-    color: #fff;
+    color: #ffffff;
     padding: 15%;
 }
 
@@ -298,7 +301,7 @@ h3 {
     padding: 2rem 0;
 }
 
-.wrap-logo-section {
+.Seccion-logos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -576,8 +579,9 @@ button {
 
 
 footer {
+    
     background-color: #222;
-    color: #fff;
+    color: #ffffff;
     padding: 20px 0;
     font-family: Arial, sans-serif;
   }
@@ -588,7 +592,9 @@ footer {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
+    text-align: center;
+    
   }
   
   .footer-section {
@@ -623,20 +629,33 @@ footer {
   .footer-section ul li a:hover {
     text-decoration: underline;
   }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
   
+  /*INICIO SECCION ICONOS REDES*/
   .social-icons {
     display: flex;
     gap: 10px;
+    justify-content: center;
   }
   
   .social-icons a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
     text-decoration: none;
     background-color: #444;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 1px;
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
     transition: background-color 0.3s, color 0.3s;
   }
   
@@ -644,6 +663,7 @@ footer {
     background-color: #f39c12;
     color: #fff;
   }
+  /*FINAL SECCION REDES*/
   
   .newsletter form {
     display: flex;
@@ -669,13 +689,5 @@ footer {
   
   .newsletter button:hover {
     background-color: #e67e22;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
   }
   
