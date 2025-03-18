@@ -1,3 +1,5 @@
+
+
 const sliderTrack = document.querySelector('.slider-track');
 const sliderItems = document.querySelectorAll('.item-productos-section');
 const itemWidth = sliderItems[0].offsetWidth; // Ancho de un elemento
@@ -72,3 +74,20 @@ document.addEventListener('DOMContentLoaded', () => {
     aplicarCambios();
 });
 
+
+let index = 0;
+        const images = document.querySelector(".Seccion-imagenes");
+        const totalSlides = document.querySelectorAll(".Seccion-imagenes img").length;
+
+        function moveSlide(step) {
+            index += step;
+            if (index < 0) {
+                index = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                index = 0;
+            }
+            images.style.transform = `translateX(${-index * 100}vw)`;
+        }
+
+        // Cambio automático cada 5 segundos
+        setInterval(() => moveSlide(1), 5000);

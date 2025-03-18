@@ -8,6 +8,8 @@ main,body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
 }
+
+
 /*
 .wrap-two-column {
     display: flex;
@@ -99,7 +101,42 @@ main,body {
     background-color: #0056b3;
     
 }*/
-
+        .Seleccion-Portada-Slider {
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .Portada-Slider {
+            position: relative;
+        }
+        .Seccion-imagenes {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .Seccion-imagenes img {
+            width: 600px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .previa, .Next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .previa {
+            left: 10px;
+        }
+        .Next {
+            right: 10px;
+        }
 
 .comparison-section {
     margin-top: 40px;
@@ -269,7 +306,60 @@ h3 {
 }
 /*FIN SECCION CABECERA*/
 
-/*SECCION PORTADA*/
+/*------------------------ INICIO SLIDER PORTADA----------------------------*/
+.Seleccion-Portada-Slider {
+    bottom: -600px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+}
+.Portada-Slider {
+    position: relative;
+}
+.Seccion-imagenes {
+   
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.Seccion-imagenes img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.previa, .Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.previa {left:  20px;}
+.Next{right: 20px;}
+
+
+.previa:hover, .Next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.titulo-slider {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    z-index: 10;
+}
+/*------------------------ FIN SLIDER PORTADA----------------------------*/
+
+/*SECCION PORTADA
 .hero-section {
     height: 90vh;
     background: url(/assets/img/fondocasco.jpg);
@@ -281,7 +371,7 @@ h3 {
     display: flex;
     align-items: center;
 }
-/*FIN PORTADA*/
+FIN PORTADA*/
 
 .wrap-hero-section {
     margin-top: -610px;
