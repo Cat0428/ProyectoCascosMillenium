@@ -5,13 +5,32 @@
     --color-secondary: #0056b3;
 }
 
-/* General */
+
+/*  Fondo en todo el body */
 body {
-    font-family: Arial, sans-serif;
+    background: url('/assets/img/fondo-somos.webp') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    min-height: 5vh;
+    color: white;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+ 
 }
+
+/* 🔹 Oscurecer el fondo sin afectar los elementos */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad del oscurecimiento */
+    z-index: -1;
+}
+
 
 /*Logo empresa*/
 .wrap-logo img{
@@ -72,7 +91,7 @@ body {
 }
 
 .menu-header-section li a:hover {
-   background-color: #077929;
+   background-color: #f1f8f3;
    color: white;
 }
 
@@ -84,30 +103,59 @@ body {
 /* Sección Quiénes Somos */
 .about-us-section {
 
+    
     padding: 40px 20px;
     color: #333;
     text-align: center;
-    background-image: url('/assets/img/fondoSomos');
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrap-title-section{
+    
+    z-index: 2;
+    max-width: 800px;
+    color: #f8faf9;
+    text-align: center;
 }
 .wrap-title-section h2 {
     font-size: 2.8rem;
+    line-height: 1.6;
     color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.wrap-title-section p{
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Contadores */
 .stats {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 50px;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
 }
 
 .stat-item {
     text-align: center;
-    background: white;
-    padding: 1rem;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1 );
+    transition: transform 0.3s ease-in-out;
+    width: 180px;
 }
+
+
 
 /* Equipo */
 .team-gallery {
