@@ -8,6 +8,8 @@ main,body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
 }
+
+
 /*
 .wrap-two-column {
     display: flex;
@@ -99,7 +101,42 @@ main,body {
     background-color: #0056b3;
     
 }*/
-
+        .Seleccion-Portada-Slider {
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .Portada-Slider {
+            position: relative;
+        }
+        .Seccion-imagenes {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .Seccion-imagenes img {
+            width: 600px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .previa, .Next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .previa {
+            left: 10px;
+        }
+        .Next {
+            right: 10px;
+        }
 
 .comparison-section {
     margin-top: 40px;
@@ -216,8 +253,9 @@ li {
 /*Fin seccion botones*/
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     text-align: center;
+
 }
 
 h2 {
@@ -239,7 +277,7 @@ h3 {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background: #333;
+    background: #000000;
     color: white;
     z-index: 1000;/* Asegura que esté por encima de otros elementos */
     
@@ -264,11 +302,64 @@ h3 {
 }
 
 .menu-header-section li a:hover {
-    color: gray;
+    color: rgb(255, 174, 0);
 }
 /*FIN SECCION CABECERA*/
 
-/*SECCION PORTADA*/
+/*------------------------ INICIO SLIDER PORTADA----------------------------*/
+.Seleccion-Portada-Slider {
+    bottom: -600px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+.Portada-Slider {
+    position: relative;
+}
+.Seccion-imagenes {
+   
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.Seccion-imagenes img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.previa, .Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.previa {left:  20px;}
+.Next{right: 20px;}
+
+
+.previa:hover, .Next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.titulo-slider {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    z-index: 10;
+}
+/*------------------------ FIN SLIDER PORTADA----------------------------*/
+
+/*SECCION PORTADA
 .hero-section {
     height: 90vh;
     background: url(/assets/img/fondocasco.jpg);
@@ -280,12 +371,13 @@ h3 {
     display: flex;
     align-items: center;
 }
-/*FIN PORTADA*/
+FIN PORTADA*/
 
 .wrap-hero-section {
+    margin-top: -610px;
     max-width: 600px;
     color: #ffffff;
-    padding: 15%;
+    padding: 4px;
 }
 
 .section {
@@ -580,7 +672,7 @@ button {
 
 footer {
     
-    background-color: #222;
+    background-color: #000000;
     color: #ffffff;
     padding: 20px 0;
     font-family: Arial, sans-serif;
@@ -627,7 +719,7 @@ footer {
   }
   
   .footer-section ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   .footer-bottom {
     text-align: center;
@@ -675,16 +767,16 @@ footer {
     flex: 1;
     padding: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
   }
   
   .newsletter button {
     padding: 8px 15px;
     border: none;
-    background-color: #f39c12;
+    background-color: #333;
     color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
   }
   
   .newsletter button:hover {
