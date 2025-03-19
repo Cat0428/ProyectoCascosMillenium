@@ -1,6 +1,6 @@
 /*------ INICIO BODY / MAIN---------*/
 main,body {
-    background-color: #fdfcfcfa;
+    background-color: hsl(0, 0%, 100%);
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0 auto;
@@ -12,6 +12,18 @@ main,body {
 /*------ FIN BODY / MAIN---------*/
 
 /*------------INICIO SECCION CABECERA---------*/
+.NombreTienda{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffffff, #ecb88f); /* Degradado llamativo */
+    -webkit-background-clip: text;
+    color: transparent; /* Hace que solo el texto tenga el degradado */
+    text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5); /* Sombra suave */
+    letter-spacing: 6px;
+    margin-left: 20px; /* Para moverlo a la izquierda */
+}
+
 
 .header-landing { 
     position: fixed; 
@@ -54,7 +66,7 @@ main,body {
             height: 100vh;
             overflow: hidden;
             position: relative;
-            margin-top: 500px; /* Ajusta el valor según necesites */
+            margin-top: 590px; /* Ajusta el valor según necesites */
         }
         
          /* Contenedor de las imágenes */
@@ -354,6 +366,7 @@ h3 {
     flex-wrap: wrap;
     padding: 20px;
     width: 100%;
+    margin-top: -73px;
 }
 
 .logo-brand {
@@ -364,6 +377,7 @@ h3 {
     border-radius: 10px; /* Bordes redondeados opcionales */
     box-shadow: 0 8px 8px rgb(0, 0, 0); /* Sombra opcional */
     transition: transform 0.3s ease, filter 0.3s ease; /* Animaciones suaves */
+   
 }
 
 .logo-brand:hover {
