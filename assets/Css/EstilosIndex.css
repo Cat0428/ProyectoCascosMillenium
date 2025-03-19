@@ -16,7 +16,7 @@ main,body {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(to right, #ffffff, #ecb88f); /* Degradado llamativo */
+    background: linear-gradient(to right, #ffffff, #ffd6b6); /* Degradado llamativo */
     -webkit-background-clip: text;
     color: transparent; /* Hace que solo el texto tenga el degradado */
     text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5); /* Sombra suave */
