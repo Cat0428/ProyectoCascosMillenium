@@ -11,6 +11,107 @@ main,body {
 }
 /*------ FIN BODY / MAIN---------*/
 
+/*------------INICIO SECCION CABECERA---------*/
+
+.header-landing { 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background: #000000;
+    color: white;
+    z-index: 1000;/* Asegura que esté por encima de otros elementos */
+}
+
+.menu-header-section ul { 
+    display: flex; 
+    gap: 2rem; 
+    list-style: none;     
+}   
+
+.menu-header-section li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-header-section li a:hover {
+    color: rgb(255, 174, 0);
+}
+/*---------------FIN SECCION CABECERA---------*/
+
+/*------------------ INICIO SLIDER PORTADA-------------------*/
+
+         /* Contenedor principal del slider */
+         .Seleccion-Portada-Slider {
+            width: 100vw;   
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            margin-top: 500px; /* Ajusta el valor según necesites */
+        }
+        
+         /* Contenedor de las imágenes */
+        .Seccion-imagenes {
+            display: flex;
+            width: 400%; 
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .Seccion-imagenes img {
+            background-color: hsl(0, 0%, 90%);
+            display: block;
+        /* -webkit-user-select: none; */
+            margin: auto;
+            cursor: zoom-in;
+            transition: background-color 300ms;
+            width: 1920px;
+            height: 800px;
+            aspect-ratio: auto 1920 / 800;
+            /*object-fit: cover;*/
+        }
+         /* 🔹 Cada imagen de fondo */
+         .slide {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        .previa, .Next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 10;
+        }
+
+        .previa { left: 20px; }
+        .Next { right: 20px; }
+
+        .previa:hover, .Next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 🔹 Espaciado después del slider */
+        .contenido {
+            padding: 20px;
+        }
+
+/*------------------ FIN SLIDER PORTADA-------------------*/
 
 
 /*---Interactividad imagen motociclista-----*/
@@ -25,6 +126,45 @@ main,body {
     background-origin: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 /*----hasta aca llega el hover de la imagen---*/    
+
+
+/*------------ INICIO DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
+html * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+/*------------ FIN DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
 
 
 /*-------------Lista de características -------*/
@@ -60,61 +200,6 @@ main,body {
 /*-------------Fin Lista de características -------*/
 
 
-/*------------------ INICIO SLIDER PORTADA-------------------*/
-
-         /* Contenedor principal del slider */
-         .Seleccion-Portada-Slider {
-            width: 100%;
-            height: 400px; /* Ajusta la altura */
-            overflow: hidden;
-            position: relative;
-        }
-        
-         /* 🔹 Contenedor de las imágenes */
-        .Seccion-imagenes {
-            display: flex;
-            width: 400%; /* 4 imágenes, 400% */
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-         /* 🔹 Cada imagen de fondo */
-         .slide {
-            width: 100%;
-            height: 100%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            flex-shrink: 0;
-        }
-        /* 🔹 Botones de navegación */
-        .previa, .Next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            z-index: 10;
-        }
-
-        .previa { left: 10px; }
-        .Next { right: 10px; }
-
-        /* 🔹 Efecto al pasar el mouse */
-        .previa:hover, .Next:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        /* 🔹 Espaciado después del slider */
-        .contenido {
-            padding: 20px;
-        }
-
-
-/*------------------ FIN SLIDER PORTADA-------------------*/
 
 /*
 .comparison-section {
@@ -171,33 +256,9 @@ main,body {
     --border-r: .2rem;
 }
 
-html * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-p {
-    font-size: 1.1rem;
-    margin-top: 0;
-}
 
-a {
-    text-decoration: none;
-}
-
-ul,
-li {
-    list-style: none;
-}
-/*
-.wrap-cta {
-    padding: 1.5rem 0;
-    
-}
-    */
-
-/*Seccion botones*/
+/*--------INICIO BOTONES IMAGENES INFORMACION------------*/
 .Botones_1   {
     bottom: -40px;
     position: relative;
@@ -230,143 +291,9 @@ li {
     transform: scale(1.9); /* Se infla */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-/*Fin seccion botones*/
-
-h1 {
-    font-size: 2rem;
-    text-align: center;
-
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-}
-
-h3 {
-    font-size: 2.2rem;
-}
-
-/*INICIO SECCION CABECERA*/
-.header-landing { /*parte del logotipo*/
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    background: #000000;
-    color: white;
-    z-index: 1000;/* Asegura que esté por encima de otros elementos */
-    
-    
-}
-
-.menu-header-section ul { 
-   
-    display: flex; 
-    gap: 2rem; 
-    list-style: none; 
-    
-    
-}   
-
-.menu-header-section li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.menu-header-section li a:hover {
-    color: rgb(255, 174, 0);
-}
-/*FIN SECCION CABECERA*/
-
-/*------------------------ INICIO SLIDER PORTADA----------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.Seleccion-Portada-Slider {
-    width: 100vw;   
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    margin-top: 550px; /* Ajusta el valor según necesites se baja por completo */
-}
+/*--------FIN BOTONES IMAGENES INFORMACION------------*/
 
 
-.Seccion-imagenes {
-  
-    width: 300vw; /* 100vw por cada imagen */
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.Seccion-imagenes img {
-    background-color: hsl(0, 0%, 90%);
-    display: block;
-   /* -webkit-user-select: none; */
-    margin: auto;
-    cursor: zoom-in;
-    transition: background-color 300ms;
-    width: 1920px;
-    height: 800px;
-    aspect-ratio: auto 1920 / 800;
-    /*object-fit: cover;*/
-}
-
-.previa, .Next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10;
-}
-
-.previa { left: 20px; }
-.Next { right: 20px; }
-
-.previa:hover, .Next:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.titulo-slider {
-    position: absolute;
-    top: 10px;
-    left: 40px;
-    font-size: 32px;
-    color: white;
-    font-weight: bold;
-    z-index: 10;
-}
-
-/*------------------------ FIN SLIDER PORTADA----------------------------*/
-
-/*SECCION PORTADA
-.hero-section {
-    height: 90vh;
-    background: url(/assets/img/fondocasco.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(106, 141, 163, 0.996);
-    background-blend-mode: multiply;
-    display: flex;
-    align-items: center;
-}
-FIN PORTADA*/
 
 .wrap-hero-section {
     margin-top: -610px;
@@ -387,13 +314,43 @@ FIN PORTADA*/
 .section h2 {
     padding: 2rem 0;
 }
+/*-----------INICIO LOGOS FLOTANTES-----*/
 
+.TituloMarcas{
+    font-size: 32px;
+    font-weight: bold;
+    color: white; /* Texto en color blanco para contraste */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    
+    /* Fondo llamativo con degradado */
+    background: linear-gradient(90deg, #ff8000, #ff0033);
+    
+    /* Sombra para destacar */
+    box-shadow: 0px 4px 10px rgba(59, 59, 59, 0.3);
+    
+    /* Bordes redondeados */
+    border-radius: 10px;
+}
+.TituloMarcas::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
 .Seccion-logos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
     flex-wrap: wrap;
     padding: 20px;
     width: 100%;
@@ -403,9 +360,9 @@ FIN PORTADA*/
     width:250px; /* Ancho uniforme para todos los logos */
     height: 250px; /* Alto uniforme para todos los logos */
     object-fit: contain; /* Ajusta la imagen dentro del tamaño definido sin recortar ni distorsionar */
-    border: 2px solid #ddd; /* Borde opcional para resaltar */
+    border: 3px solid #ff9900; /* Borde opcional para resaltar */
     border-radius: 10px; /* Bordes redondeados opcionales */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    box-shadow: 0 8px 8px rgb(0, 0, 0); /* Sombra opcional */
     transition: transform 0.3s ease, filter 0.3s ease; /* Animaciones suaves */
 }
 
@@ -413,6 +370,8 @@ FIN PORTADA*/
     transform: scale(1.2);
     filter: brightness(1.2);
 }
+/*-----------FIN LOGOS FLOTANTES-------*/
+
 
 .wrap-title-section {
     display: flex;
