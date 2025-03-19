@@ -1,3 +1,4 @@
+/*------ INICIO BODY / MAIN---------*/
 main,body {
     background-color: #fdfcfcfa;
     font-family: Arial, sans-serif;
@@ -8,21 +9,9 @@ main,body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     width: 100%; /* Asegura que el ancho sea el correcto */
 }
+/*------ FIN BODY / MAIN---------*/
 
 
-/*
-.wrap-two-column {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.wrap-img_two-column {
-    flex: 1;
-}
-*/
 
 /*---Interactividad imagen motociclista-----*/
 .interactive-img {
@@ -37,16 +26,8 @@ main,body {
 }
 /*----hasta aca llega el hover de la imagen---*/    
 
-/*
-.img-caption {
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-}
-*/
 
-/* Lista de características */
+/*-------------Lista de características -------*/
 .features-list li {
     list-style: none;
     padding: 0;
@@ -76,33 +57,10 @@ main,body {
     font-size: 0.9em;
     text-align: right;
 }
-
-/* Botones de llamada a la acción
-.wrap-cta {
-    margin-top: 20px;
-    
-}
-*/
-
-/*
-.cta-a-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; 
+/*-------------Fin Lista de características -------*/
 
 
-.cta-a:hover,
-.cta-a-secondary:hover {
-    background-color: #0056b3;
-    
-}*/
-
-/*------------------ SLIDER PORTADA-------------------*/
+/*------------------ INICIO SLIDER PORTADA-------------------*/
 
          /* Contenedor principal del slider */
          .Seleccion-Portada-Slider {
@@ -158,6 +116,7 @@ main,body {
 
 /*------------------ FIN SLIDER PORTADA-------------------*/
 
+/*
 .comparison-section {
     margin-top: 40px;
     padding: 20px;
@@ -165,13 +124,14 @@ main,body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-    
-
+ */   
+/*
 .comparison-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+*/
 
 .product-card {
     text-align: center;
@@ -334,25 +294,32 @@ h3 {
 }
 
 .Seleccion-Portada-Slider {
-    width: 100vw;
+    width: 100vw;   
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-top: 400px; /* Ajusta el valor según necesites se baja por completo */
+    margin-top: 550px; /* Ajusta el valor según necesites se baja por completo */
 }
 
 
 .Seccion-imagenes {
-    display: flex;
+  
     width: 300vw; /* 100vw por cada imagen */
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .Seccion-imagenes img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+    background-color: hsl(0, 0%, 90%);
+    display: block;
+   /* -webkit-user-select: none; */
+    margin: auto;
+    cursor: zoom-in;
+    transition: background-color 300ms;
+    width: 1920px;
+    height: 800px;
+    aspect-ratio: auto 1920 / 800;
+    /*object-fit: cover;*/
 }
 
 .previa, .Next {
