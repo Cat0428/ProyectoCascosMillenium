@@ -74,20 +74,46 @@ document.addEventListener('DOMContentLoaded', () => {
     aplicarCambios();
 });
 
+//------------------------INICIO SLIDER PORTADA----------------
 
 let index = 0;
-        const images = document.querySelector(".Seccion-imagenes");
-        const totalSlides = document.querySelectorAll(".Seccion-imagenes img").length;
+const imagesContainer = document.querySelector(".Seccion-imagenes");
+const slides = document.querySelectorAll(".Seccion-imagenes img");
+const totalSlides = slides.length;
 
-        function moveSlide(step) {
-            index += step;
-            if (index < 0) {
-                index = totalSlides - 1;
-            } else if (index >= totalSlides) {
-                index = 0;
-            }
-            images.style.transform = `translateX(${-index * 100}vw)`;
-        }
+// Ajusta el ancho dinámicamente según el número de imágenes
+imagesContainer.style.width = `${totalSlides * 100}vw`;
 
-        // Cambio automático cada 5 segundos
-        setInterval(() => moveSlide(1), 5000);
+function moveSlide(step) {
+    index += step;
+
+    if (index < 0) {
+        index = totalSlides - 1; // Ir al final si va hacia atrás desde la primera
+    } else if (index >= totalSlides) {
+        index = 0; // Volver al inicio si va más allá del último
+    }
+
+    imagesContainer.style.transform = `translateX(${-index * 100}vw)`;
+}
+
+// Reiniciar el temporizador cuando el usuario navega manualmente
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => moveSlide(1), 5000);
+}
+
+// Eventos para los botones
+document.querySelector(".Next").addEventListener("click", () => {
+    moveSlide(1);
+    resetAutoSlide();
+});
+
+document.querySelector(".previa").addEventListener("click", () => {
+    moveSlide(-1);
+    resetAutoSlide();
+});
+
+// Cambio automático cada 5 segundos
+let autoSlide = setInterval(() => moveSlide(1), 5000);
+
+//-------------------------- FIN SLIDER PORTADA ---------------------------
