@@ -125,6 +125,19 @@ main,body {
 
 /*------------------ FIN SLIDER PORTADA-------------------*/
 
+.SliderCascos{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+
 
 /*---Interactividad imagen motociclista-----*/
 .interactive-img {
