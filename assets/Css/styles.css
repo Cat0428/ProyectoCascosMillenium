@@ -338,7 +338,7 @@ h3 {
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-top: 613px; /* Ajusta el valor según necesites se baja por completo */
+    margin-top: 400px; /* Ajusta el valor según necesites se baja por completo */
 }
 
 
@@ -377,7 +377,7 @@ h3 {
 
 .titulo-slider {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 40px;
     font-size: 32px;
     color: white;
