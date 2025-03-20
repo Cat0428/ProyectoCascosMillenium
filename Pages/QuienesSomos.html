@@ -93,12 +93,43 @@
     </div>
 
     <!-- Video corporativo -->
-    <section class="video-section">
-        <h2 class="section-text">Nuestra Historia</h2>
-        <video autoplay muted loop>
-            <source src="/assets/img/Medellin.mp4" type="video/mp4">
-        </video>
+    <section class="history-section">
+        <h2 class="section-text">Historia</h2>
+    
+        <!-- Contenedor del carrusel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Video 1 -->
+                <div class="swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="/assets/img/Medellin.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Imagen 1 -->
+                <div class="swiper-slide">
+                    <img src="/assets/img/cascosRotos.mp4" alt="Historia Cascos Milenium">
+                </div>
+                <!-- Video 2 -->
+                <div class="swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="swiper-slide">
+                    <img src="imagen2.jpg" alt="Evolución de la empresa">
+                </div>
+            </div>
+    
+            <!-- Flechas de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
+    
 
     <!-- Mapa de ubicación -->
     <section class="map-section">
