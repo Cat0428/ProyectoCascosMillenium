@@ -44,60 +44,37 @@ body::before {
     border: 2px solid red;
 }
 
-/* Header */
-.header-landing {
-    position: fixed;
-    top: 1px;
+
+.header-landing { 
+    position: fixed; 
+    top: 0; 
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem  1rem;
-    background: #333;
-    color: #333;
-    z-index: 1000;
-    height: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1 );
+    justify-content: center;
+    padding: 1rem 0;
+    background: #000000;
+    color: white;
+    z-index: 1000;/* Asegura que esté por encima de otros elementos */
 }
 
-/* Estilos para el contenedor del menú */
-.menu-header-section {
-    padding: 10px 20px;       /* Espaciado interno */
-    margin-top: -20px;         /* Sube el menú 20px */
-    margin-right: 580px;         /* Mueve el menú 50px a la izquierda */
-    border-radius: 5px;        /* Bordes redondeados */
-}
+.menu-header-section ul { 
+    display: flex; 
+    gap: 2rem; 
+    list-style: none;     
+}   
 
-/*Menu de linea*/
-.menu-header-section ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin-left: 50px;
-    padding: 0;
-    justify-content: flex-start;
-    position: relative;
-}
-
-/*Estilos para los botones del menú*/
-.menu-header-section li a{
-    text-decoration: none;
-    color: #eceeeb;
-    font-size: 1rem;
+.menu-header-section li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .menu-header-section li a:hover {
-   background-color: #027e25;
-   color: white;
-}
-
-/*Efeco para evitar que queden clickeados*/
-.menu-header-section li a:focus{
-    outline: none;
+    color: rgb(255, 174, 0);
 }
 
 /* Sección Quiénes Somos */
@@ -113,7 +90,7 @@ body::before {
 .section-text {
     font-size: 2.5rem; /* Tamaño del texto */
     font-weight: bold; /* Texto en negrita */
-    color: #f50505; /* Color llamativo (ajústalo según la identidad de la marca) */
+    color: #faf7f7; /* Color llamativo (ajústalo según la identidad de la marca) */
     text-transform: uppercase; /* Convierte el texto en mayúsculas */
     letter-spacing: 2px; /* Espaciado entre letras */
     text-align: center; /* Centra el texto */
@@ -139,7 +116,7 @@ body::before {
 .wrap-title-section h2 {
     font-size: 2.8rem;
     line-height: 1.6;
-    color: #f50505;
+    color: #f5f2f2;
     margin-bottom: 10px;
 }
 
