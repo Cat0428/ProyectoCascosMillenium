@@ -5,7 +5,7 @@
     --color-secondary: #0056b3;
 }
 
-
+   
 /*  Fondo en todo el body */
 body {
     background: url('/assets/img/fondo-somos.webp') no-repeat center center/cover;
@@ -16,7 +16,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Times, sans-serif;
  
 }
 
