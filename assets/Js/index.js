@@ -44,34 +44,49 @@ let autoSlide = setInterval(() => moveSlide(1), 5000);
 //----------------------- INICIO SLIDER CASCOS--------------------------
 const sliderTrack = document.querySelector('.slider-track');
 const sliderItems = document.querySelectorAll('.item-productos-section');
-const itemWidth = sliderItems[0].offsetWidth; // Ancho de un elemento
+const itemWidth = sliderItems[0].offsetWidth + 10; // Ancho del elemento con el margen
 let currentIndex = 0;
 
-// Clonamos los elementos al principio y al final para el efecto de bucle
-sliderTrack.innerHTML += sliderTrack.innerHTML; // Duplicamos los elementos
-const totalItems = sliderTrack.children.length; // Nuevo número total de elementos
+// Clonamos los elementos para hacer el efecto infinito
+sliderTrack.innerHTML += sliderTrack.innerHTML;
+const totalItems = sliderTrack.children.length;
 
-// Ajustar el ancho total de la pista para soportar los elementos duplicados
+// Ajustamos el ancho del contenedor
 sliderTrack.style.width = `${totalItems * itemWidth}px`;
 
-// Configurar el slider infinito
+// Mueve el slider de forma automática
 function moveSlider() {
     currentIndex++;
     sliderTrack.style.transition = 'transform 0.5s ease-in-out';
     sliderTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
 
-    // Cuando llegamos al final, reiniciamos sin transición
+    // Reinicio del slider al llegar al final
     if (currentIndex >= totalItems / 2) {
         setTimeout(() => {
             sliderTrack.style.transition = 'none';
             currentIndex = 0;
             sliderTrack.style.transform = `translateX(0px)`;
-        }, 500); // Coincide con la duración de la transición
+        }, 500);
     }
 }
 
 // Inicia el movimiento automático
-setInterval(moveSlider, 3000);
+let sliderInterval = setInterval(moveSlider, 3000);
+
+// Botones de navegación
+document.querySelector('.prev').addEventListener('click', () => {
+    clearInterval(sliderInterval);
+    currentIndex = Math.max(currentIndex - 1, 0);
+    sliderTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+    sliderInterval = setInterval(moveSlider, 3000);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    clearInterval(sliderInterval);
+    moveSlider();
+    sliderInterval = setInterval(moveSlider, 3000);
+});
+
 
 //----------------------- FIN SLIDER CASCOS--------------------------
 
