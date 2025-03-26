@@ -235,37 +235,6 @@ h3 {
 /*------------ FIN DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
 
 
-/*-------------Lista de características -------*/
-.features-list li {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-.features-list li strong {
-    color: #444;
-}
-
-
-.testimonials {
-    margin-top: 20px;
-    padding: 15px;
-    border-left: 4px solid #007BFF;
-    background: #eeeff0;
-}
-
-.testimonials blockquote {
-    margin: 0;
-    font-style: italic;
-}
-
-.testimonials cite {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9em;
-    text-align: right;
-}
-/*-------------Fin Lista de características -------*/
 
 .product-card {
     text-align: center;
@@ -567,6 +536,27 @@ h3 {
 
 
 /*------- INICIO FOTO Y CARACTERISTICAS----*/
+.wrap-Descripcion-seccion {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.resaltado {
+    color: #007bff;
+    font-weight: bold;
+}
+
 /* Contenedor principal */
 .wrap-two-column, .wrap-two-column2 {
     display: flex;
