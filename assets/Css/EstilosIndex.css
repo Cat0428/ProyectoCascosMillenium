@@ -642,8 +642,11 @@ cite {
 
 /* Botones */
 .wrap-cta, .wrap-cta2 {
-    margin-top: 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado uniforme entre botones */
+    margin-top: 20px;
+    width: 100%;
 }
 
 .Boton1, .Boton2 {
@@ -660,7 +663,8 @@ cite {
     text-transform: uppercase;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    margin: 10px;
+    min-width: 220px; /* Asegura que los botones tengan el mismo ancho */
+    text-align: center;
 }
 
 .Boton1:hover, .Boton2:hover {
