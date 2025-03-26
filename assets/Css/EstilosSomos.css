@@ -94,15 +94,43 @@ body::before {
 }
 
 .section-text {
-    font-size: 2.5rem; /* Tamaño del texto */
+    font-size: 3rem; /* Tamaño más grande para impacto visual */
     font-weight: bold; /* Texto en negrita */
-    color: #faf7f7; /* Color llamativo (ajústalo según la identidad de la marca) */
+    color: #ffffff; /* Blanco puro para mejor visibilidad */
     text-transform: uppercase; /* Convierte el texto en mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
+    letter-spacing: 3px; /* Aumenta el espaciado entre letras */
     text-align: center; /* Centra el texto */
-    margin-bottom: 15px; /* Espacio debajo del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
     position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    background: linear-gradient(90deg, #f7f6f4, #f8f6f6); /* Degradado en el texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Hace que el texto tenga degradado */
+    transition: all 0.3s ease-in-out;
 }
+
+/* Efecto de subrayado animado */
+.section-text::after {
+    content: "";
+    width: 100px; /* Longitud del subrayado */
+    height: 5px; /* Grosor del subrayado */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Efecto hover para más dinamismo */
+.section-text:hover {
+    letter-spacing: 5px;
+}
+
+.section-text:hover::after {
+    width: 150px; /* Aumenta el tamaño del subrayado en hover */
+}
+
 
 
 
@@ -156,6 +184,7 @@ body::before {
     width: 200px;
     box-shadow: 0 4px 8px rgb(255, 255, 255);
     transition: transform 0.3s ease-in-out;
+    margin-top: 5px;
 }
 
 /* Animación al pasar el cursor */
@@ -175,6 +204,7 @@ body::before {
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 10px;
+    
 }
 
 .team-section {
@@ -210,6 +240,7 @@ body::before {
 .history-section {
     text-align: center;
     padding: 20px;
+    
 }
 
 .history-section h2{
@@ -220,8 +251,10 @@ body::before {
 .history-section video {
     width: 60%;
     max-width: 600px;
-    border-radius: 10px;
+    border-radius: 100px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2 );
+    padding-top:10px;
+    
 }
 
 /* Mapa */
@@ -235,3 +268,117 @@ body::before {
 .hidden {
     display: none;
 }
+
+footer {
+    
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+    
+  }
+  
+  .footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: none;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  /*INICIO SECCION ICONOS REDES*/
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #444;
+    padding: 1px;
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  /*FINAL SECCION REDES*/
+  
+  .newsletter form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletter input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .newsletter button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .newsletter button:hover {
+    background-color: #e67e22;
+  }
+  
