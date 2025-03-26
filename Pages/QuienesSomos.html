@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos - Nuestra Empresa</title>
+    
+    <!-- Enlace a la hoja de estilos -->
     <link rel="stylesheet" href="/assets/Css/EstilosSomos.css">
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- Para efectos al hacer scroll -->
+    
+    <!-- Biblioteca ScrollReveal para efectos al hacer scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+
 <body>
 
-    <!-- Encabezado -->
+    <!-- ===========================
+         ENCABEZADO (HEADER)
+         Contiene el logo y la barra de navegación
+    ============================ -->
     <header class="header-landing">
         <div class="wrap-logo">
+            <!-- Logo de la empresa -->
             <img src="/assets/img/logoEmpresa.webp" alt="Logo Empresa">
         </div>
         <nav class="menu-header-section">
@@ -23,43 +32,54 @@
         </nav>
     </header>
 
-    <!-- Sección Quiénes Somos -->
+    <!-- ===========================
+         SECCIÓN QUIÉNES SOMOS
+         Muestra información sobre la empresa
+    ============================ -->
     <section class="about-us-section">
-       
         <div class="wrap-title-section">
             <div class="wrap-somos">
+                <!-- Imagen de fondo -->
                 <img src="#" alt="Fondo de somos">
-           </div>
+            </div>
+            
+            <!-- Título principal -->
             <h2 class="section-text">Conócenos</h2>
+            
+            <!-- Descripción de la empresa -->
             <p class="section-text">
-                        En <strong><em> Cascos Milleniun </em></strong>, nuestra misión es proteger a los motociclistas con cascos <br>
-                        que combinan seguridad y estilo. Desde nuestros inicios, hemos trabajado con  <br>
-                        dedicación para ofrecer productos de alta calidad que inspiran confianza <br>
-                    </p>
-
+                En <strong><em> Cascos Millenium </em></strong>, nuestra misión es proteger a los motociclistas con cascos <br>
+                que combinan seguridad y estilo. Desde nuestros inicios, hemos trabajado con <br>
+                dedicación para ofrecer productos de alta calidad que inspiran confianza.
+            </p>
         </div>
     </section>
 
-  
-
-    <!-- Contadores dinámicos -->
+    <!-- ===========================
+         SECCIÓN DE ESTADÍSTICAS
+         Muestra datos dinámicos con contadores animados
+    ============================ -->
     <section class="stats">
         <div class="stat-item">
+            <!-- Contador de cascos vendidos -->
             <h3 class="counter" id="soldCount" data-target="150">0</h3>
             <p>Cascos vendidos</p>
         </div>
         <div class="stat-item">
+            <!-- Contador de clientes satisfechos -->
             <h3 class="counter" id="clientsCount" data-target="300">0</h3>
             <p>Clientes Satisfechos</p>
-
-        
         </div>
-
     </section>
 
-    <!-- Sección de equipo -->
+    <!-- ===========================
+         SECCIÓN NUESTRO EQUIPO
+         Presentación de los integrantes del equipo
+    ============================ -->
     <section class="team-section">
         <h2 class="section-text">Nuestro Equipo</h2>
+        
+        <!-- Galería del equipo -->
         <div class="team-gallery">
             <div class="team-member">
                 <img class="team-photo" src="equipo1.jpg" alt="Miembro 1">
@@ -75,48 +95,101 @@
                     <p>Desarrolladora Full Stack</p>
                 </div>
             </div>
-
-             <div class="team-member">
-                <img class="team-photo" src="equipo2.jpg" alt="Miembro 2">
+            <div class="team-member">
+                <img class="team-photo" src="equipo3.jpg" alt="Miembro 3">
                 <div class="team-info">
                     <h3>Cristian David López</h3>
-                    <p>Desarrolladora Full Stack</p>
+                    <p>Desarrollador Full Stack</p>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- Video corporativo -->
+    <!-- ===========================
+         SECCIÓN HISTORIA
+         Muestra un video corporativo de la empresa
+    ============================ -->
     <section class="history-section">
         <h2 class="section-text">Historia</h2>
     
-        <!-- Contenedor del carrusel -->
+        <!-- Contenedor del video -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Video 1 -->
                 <div class="swiper-slide">
+                    <!-- Video de la historia de la empresa -->
                     <video autoplay muted loop>
                         <source src="/assets/img/Historia.mp4" type="video/mp4">
                     </video>
                 </div>
-                
-    
-            <!-- Flechas de navegación -->
+            </div>
+
+            <!-- Controles de navegación del carrusel -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-    
-            <!-- Paginación -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    
 
-    <!-- Mapa de ubicación -->
-    <section class="map-section">
-        <h2 class="section-text">Ubicación</h2>
-        <iframe src="https://www.google.com/maps/embed?..."></iframe>
-    </section>
-
+    <!-- Enlace al archivo de JavaScript -->
     <script src="somos.js" defer></script>
+
 </body>
+
+<!-- ===========================
+     PIE DE PÁGINA (FOOTER)
+     Contiene información de contacto y redes sociales
+============================ -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Información de contacto -->
+        <div class="footer-section company-info">
+            <h4>Contáctanos</h4>
+            <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+            <p><strong>Email:</strong> cascosmilenium@gmail.com</p>
+            <p><strong>Dirección:</strong> Calle 123, Medellín, Colombia</p>
+        </div>
+
+        <!-- Navegación rápida -->
+        <div class="footer-section quick-links">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quiénes somos</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-section social-media">
+            <h4>Síguenos</h4>
+            <p>Conéctate con nosotros en redes sociales para conocer las últimas novedades y promociones.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Suscripción al boletín -->
+        <div class="footer-section newsletter">
+            <h4>Suscríbete</h4>
+            <p>Recibe noticias, ofertas y consejos directamente en tu correo.</p>
+            <form>
+                <input type="email" placeholder="Tu correo electrónico" required />
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Derechos reservados -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 CascosDeMoto. Todos los derechos reservados.</p>
+        <p>Diseñado con 💖 en Medellín, Colombia.</p>
+    </div>
+</footer>
+
 </html>

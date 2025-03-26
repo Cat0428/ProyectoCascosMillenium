@@ -1,17 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const buyButtons = document.querySelectorAll(".btn-comprar"); // Botones de compra
-    const counter = document.getElementById("soldCount"); // Contador en "Quiénes Somos"
+document.addEventListener("DOMContentLoaded", function () {
+    function animateCounter(id, target) {
+        let counter = document.getElementById(id);
+        let count = 0;
+        let speed = Math.floor(target / 100);
+        
+        let interval = setInterval(() => {
+            count += speed;
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            counter.innerText = count;
+        }, 20);
+    }
 
-    // Obtener el número de cascos vendidos desde localStorage (o 0 si es la primera vez)
-    let cascosVendidos = localStorage.getItem("cascosVendidos") || 0;
-    counter.innerText = cascosVendidos; // Mostrar el número al cargar la página
-
-    // Evento de compra
-    buyButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            cascosVendidos++; // Aumenta la cantidad
-            localStorage.setItem("cascosVendidos", cascosVendidos); // Guarda en localStorage
-            counter.innerText = cascosVendidos; // Actualiza el contador en la interfaz
-        });
-    });
+    animateCounter("soldCount", 150);
+    animateCounter("clientsCount", 300);
 });
