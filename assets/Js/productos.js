@@ -141,3 +141,16 @@ buscarBtn.addEventListener("click", () => {
 });
 
 //------------------ FIN FILTRO
+
+//-------------- LUPA HEADER
+
+document.getElementById("icono-busqueda").addEventListener("click", function () {
+    let busqueda = prompt("¿Qué producto buscas?");
+    if (busqueda) {
+        alert(`Buscando: ${busqueda}`);
+    }
+});
+
+document.getElementById("icono-usuario").addEventListener("click", function () {
+    alert("Aquí iría el menú de usuario o el inicio de sesión.");
+});

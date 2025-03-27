@@ -5,26 +5,36 @@
     <title>Opciones de compra</title>
     <link rel="stylesheet" href="/assets/Css/EstilosProductos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
 </head>
 <body>
     <main>
         <header class="header-landing">
-            <div class="wrap-logo">  
-                <h1 class="NombreTienda">Tienda Cascos Milenium</h1>       
+            <div class="wrap-logo">       
                 <nav class="menu-header-section">
+                    
                     <ul>
                         <li><a href="/Pages/index.html">Inicio</a></li>
                         <li><a href="/Pages/QuienesSomos.html">Quiénes somos</a></li>
                         <li><a href="/Pages/blog.html">Blog</a></li>
                         <li><a href="/Pages/contactos.html">Contacto</a></li>    
                     </ul>
-                    <section >
-                        <i class="fas fa-shopping-cart"></i>
+                    <div id="header-icons">
+                        <i class="fas fa-search" id="icono-busqueda"></i>
+                        <i class="fas fa-user" id="icono-usuario"></i>
+                        <div id="icono-carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="contador-carrito">0</span>
+                        </div>
+                    </div>
+
                     </section>
                 </nav>
             </div>
         </header>
+
 
         <section >
             <div class="catalogo">
@@ -34,60 +44,55 @@
         </section>
 
         <!--SECCION CARRITO-->
-        <section >
-            <i class="fas fa-shopping-cart"></i>
-        </section>
+
         
-        <div id="carrito-popup" class="oculto">
-            <h3  id="carrito-icon"></h3>
-            <ul id="lista-carrito"></ul>
-            <p><strong>Total:</strong> $<span id="total">0</span></p>
-            <button  id="cerrar-carrito" >Pagar</button> 
-        </div>
+       
     <!--FIN SECCION CARRITO-->
 
 
     <!-- INICIO FILTRO -->
 
-    <div class="filter-container">
-        <h2>Filtros</h2>
-        <p>FILTRADO POR:</p>
-        <label for="category">Categoría</label>
-        <select id="category">
-            <option value="">Seleccione</option>
-        </select>
-        <label for="finish">Acabado</label>
-        <select id="finish">
-            <option value="">Seleccione</option>
-        </select>
-        <label for="pinlock">Incluye Pinlock</label>
-        <select id="pinlock">
-            <option value="">Seleccione</option>
-        </select>
-        <label for="size">Talla</label>
-        <select id="size">
-            <option value="">Seleccione</option>
-        </select>
-        <label for="visor">Visor</label>
-        <select id="visor">
-            <option value="">Seleccione</option>
-        </select>
-        
-        <h3>Rango de precios</h3>
-        <p id="price-value"></p>
-        <input type="range" id="price-range">
-        <div class="price-inputs">
-            <input type="number" id="price-min" min="390000" max="510000"> Min
-            <input type="number" id="price-max" min="390000" max="510000"> Max
-        </div>
-        <button id="buscar-btn">BUSCAR</button>
-    </div>
+    <div class="main-container">
+        <aside class="filter-container">
+            <h2>Filtros</h2>
+            <p>FILTRADO POR:</p>
+            <label for="category">Categoría</label>
+            <select id="category">
+                <option value="">Seleccione</option>
+            </select>
+            <label for="finish">Acabado</label>
+            <select id="finish">
+                <option value="">Seleccione</option>
+            </select>
+            <label for="pinlock">Incluye Pinlock</label>
+            <select id="pinlock">
+                <option value="">Seleccione</option>
+            </select>
+            <label for="size">Talla</label>
+            <select id="size">
+                <option value="">Seleccione</option>
+            </select>
+            <label for="visor">Visor</label>
+            <select id="visor">
+                <option value="">Seleccione</option>
+            </select>
+    
+            <h3>Rango de precios</h3>
+            <p id="price-value"></p>
+            <input type="range" id="price-range">
+            <div class="price-inputs">
+                <input type="number" id="price-min" min="390000" max="510000"> Min
+                <input type="number" id="price-max" min="390000" max="510000"> Max
+            </div>
+            <button id="buscar-btn">BUSCAR</button>
+        </aside>
+    
     
     <!-- INICIO FILTRO -->
 
     <!--SECCIÓN PRODUCTOS-->
 
-    <section id="Productos">
+    <section class="products-container">
         
         <div class="producto" id="casco1" data-marca="Tech">
             <img src="/assets/img/casco1.jpg" alt="casco1">
