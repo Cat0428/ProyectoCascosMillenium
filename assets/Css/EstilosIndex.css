@@ -28,7 +28,7 @@ main,body {
     color: transparent; /* Hace que solo el texto tenga el degradado */
     text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5); /* Sombra suave */
     letter-spacing: 6px;
-    margin-left: 20px; /* Para moverlo a la izquierda */
+    margin-left: center; /* Para moverlo a la izquierda */
 }
 
 

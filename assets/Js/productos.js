@@ -91,3 +91,53 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Productos filtrados por marca:", marcaSeleccionada);
     }
 });
+
+//----------- INICIO FILTRO
+
+// Seleccionar elementos del DOM
+const priceMinInput = document.getElementById("price-min");
+const priceMaxInput = document.getElementById("price-max");
+const priceRange = document.getElementById("price-range");
+const priceValue = document.getElementById("price-value");
+const buscarBtn = document.getElementById("buscar-btn");
+
+const minPrice = 390000;
+const maxPrice = 510000;
+
+// Inicializar valores
+priceMinInput.value = minPrice;
+priceMaxInput.value = maxPrice;
+priceRange.min = minPrice;
+priceRange.max = maxPrice;
+priceRange.value = minPrice;
+priceValue.textContent = `$ ${minPrice.toLocaleString()} - $ ${maxPrice.toLocaleString()}`;
+
+// Actualizar valores en el slider
+priceRange.addEventListener("input", () => {
+    priceMinInput.value = priceRange.value;
+    priceValue.textContent = `$ ${priceRange.value.toLocaleString()} - $ ${maxPrice.toLocaleString()}`;
+});
+
+// Actualizar valores en los inputs
+priceMinInput.addEventListener("input", () => {
+    if (priceMinInput.value < minPrice) priceMinInput.value = minPrice;
+    if (priceMinInput.value > maxPrice) priceMinInput.value = maxPrice;
+    priceRange.value = priceMinInput.value;
+    priceValue.textContent = `$ ${priceMinInput.value.toLocaleString()} - $ ${maxPrice.toLocaleString()}`;
+});
+
+priceMaxInput.addEventListener("input", () => {
+    if (priceMaxInput.value > maxPrice) priceMaxInput.value = maxPrice;
+    if (priceMaxInput.value < minPrice) priceMaxInput.value = minPrice;
+    priceValue.textContent = `$ ${priceMinInput.value.toLocaleString()} - $ ${priceMaxInput.value.toLocaleString()}`;
+});
+
+// Evento de búsqueda
+buscarBtn.addEventListener("click", () => {
+    const minSelected = parseInt(priceMinInput.value, 10);
+    const maxSelected = parseInt(priceMaxInput.value, 10);
+    console.log(`Filtrar productos entre: $${minSelected} - $${maxSelected}`);
+    // Aquí puedes agregar la lógica para filtrar productos
+});
+
+//------------------ FIN FILTRO

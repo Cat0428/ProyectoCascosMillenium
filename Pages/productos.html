@@ -8,15 +8,25 @@
 
 </head>
 <body>
-    <div id="paypal-button-container"></div>
-
-    <header>
-        <h1>Tienda de Cascos Milenium</h1>
-    </header>
     <main>
+        <header class="header-landing">
+            <div class="wrap-logo">  
+                <h1 class="NombreTienda">Tienda Cascos Milenium</h1>       
+                <nav class="menu-header-section">
+                    <ul>
+                        <li><a href="/Pages/index.html">Inicio</a></li>
+                        <li><a href="/Pages/QuienesSomos.html">Quiénes somos</a></li>
+                        <li><a href="/Pages/blog.html">Blog</a></li>
+                        <li><a href="/Pages/contactos.html">Contacto</a></li>    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <section >
             <div class="catalogo">
             <h2 >Catálogo</h2>
+            
             </div>
         </section>
 
@@ -33,9 +43,49 @@
         </div>
     <!--FIN SECCION CARRITO-->
 
+
+    <!-- INICIO FILTRO -->
+
+    <div class="filter-container">
+        <h2>Filtros</h2>
+        <p>FILTRADO POR:</p>
+        <label for="category">Categoría</label>
+        <select id="category">
+            <option value="">Seleccione</option>
+        </select>
+        <label for="finish">Acabado</label>
+        <select id="finish">
+            <option value="">Seleccione</option>
+        </select>
+        <label for="pinlock">Incluye Pinlock</label>
+        <select id="pinlock">
+            <option value="">Seleccione</option>
+        </select>
+        <label for="size">Talla</label>
+        <select id="size">
+            <option value="">Seleccione</option>
+        </select>
+        <label for="visor">Visor</label>
+        <select id="visor">
+            <option value="">Seleccione</option>
+        </select>
+        
+        <h3>Rango de precios</h3>
+        <p id="price-value"></p>
+        <input type="range" id="price-range">
+        <div class="price-inputs">
+            <input type="number" id="price-min" min="390000" max="510000"> Min
+            <input type="number" id="price-max" min="390000" max="510000"> Max
+        </div>
+        <button id="buscar-btn">BUSCAR</button>
+    </div>
+    
+    <!-- INICIO FILTRO -->
+
     <!--SECCIÓN PRODUCTOS-->
 
     <section id="Productos">
+        
         <div class="producto" id="casco1" data-marca="Tech">
             <img src="/assets/img/casco1.jpg" alt="casco1">
             <h3>Casco Abierto Tech T-10 Solid Certificado</h3>
@@ -176,47 +226,62 @@
     </main>
 
 
-<!--PIE DE PAGINA-->
-    <footer id="pie-pagina">
-        <div class="container">
-            <div class="informacion">
-                <h4>Sobre Nosotros</h4>
-                <p>Somos una tienda especializada en cascos para motociclistas, con los mejores precios y una amplia variedad de productos.</p>
-            </div>
-    
-            <div class="enlaces">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
-                    <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quienes somos</a></li>
-                    <li><a href="http://127.0.0.1:5500/Pages/blog.html">Blog</a></li>
-                    <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
-                </ul>
-            </div>
-    
-            <div class="contacto">
-                <h4>Contacto</h4>
-                <p><strong>Teléfono:</strong> +57 123 456 789</p>
-                <p><strong>Email:</strong> cascosmilenium@gmail.com</p>
-            </div>
-    
-            <div class="redes-sociales">
-                <h4>Redes Sociales</h4>
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-x"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-            </div>
+    <!--PIE DE PAGINA-->
+    <footer>
+        <div class="footer-container">
+        <!-- Información de la empresa -->
+        <div class="footer-section company-info">
+            <h4>Contáctanos</h4>
+            <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+            <p><strong>Email:</strong> cascosmilenium@gmail.com</p>
+            <p><strong>Dirección:</strong> Calle 123, Medellín, Colombia</p>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2024 Tienda Cascos Milenium. Todos los derechos reservados.</p>
+    
+        <!-- Navegación rápida -->
+        <div class="footer-section quick-links">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quienes somos</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a></li>
+                <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
+                
+            </ul>
+        </div>
+    
+        <!-- Redes sociales -->
+        <div class="footer-section social-media">
+            <h4>Síguenos</h4>
+            <p>Conéctate con nosotros en redes sociales para conocer las últimas novedades y promociones.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>        
+        </div>
+    
+        <!-- Suscripción al boletín -->
+        <div class="footer-section newsletter">
+            <h4>Suscríbete</h4>
+            <p>Recibe noticias, ofertas y consejos directamente en tu correo.</p>
+            <form>
+            <input type="email" placeholder="Tu correo electrónico" required />
+            <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+        </div>
+    
+        <div class="footer-bottom">
+        <p>&copy; 2024 CascosDeMoto. Todos los derechos reservados.</p>
+        <p>Diseñado con 💖 en Medellín, Colombia.</p>
         </div>
     </footer>
 
-    <!--FIN PIE DE PAGINA-->
-    
-    <script src="/assets/Js/productos.js"></script><br><br><br><br>
+        <!--FIN PIE DE PAGINA-->
+        
+        <script src="/assets/Js/productos.js"></script><br><br><br><br>
 
     
 </body>
