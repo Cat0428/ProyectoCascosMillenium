@@ -48,18 +48,46 @@ botonesCoomprar.forEach((boton) =>{
 
 
 
-// Obtener referencia al botón de pagar
-const botonPagar = document.getElementById("pagar");
+// // Obtener referencia al botón de pagar
+// const botonPagar = document.getElementById("pagar");
 
-// Evento para redirigir a la página de resumen
-botonPagar.addEventListener("click", () => {
-    if (carrito.length === 0) {
-        alert("Tu carrito está vacío. Agrega productos antes de continuar.");
-        return;
+// // Evento para redirigir a la página de resumen
+// botonPagar.addEventListener("click", () => {
+//     if (carrito.length === 0) {
+//         alert("Tu carrito está vacío. Agrega productos antes de continuar.");
+//         return;
+//     }
+//     // Redirige al usuario a la página de resumen
+//     window.location.href = "http://127.0.0.1:5500/paypal.html";
+// });
+
+
+// Obtener el parámetro 'marca' de la URL
+
+
+const params = new URLSearchParams(window.location.search);
+const marcaSeleccionada = params.get("marca");
+
+console.log("Marca seleccionada en productos.html:", marcaSeleccionada);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const marcaSeleccionada = params.get("marca");
+
+    console.log("Marca seleccionada en productos.html:", marcaSeleccionada);
+
+    if (marcaSeleccionada) {
+        const productos = document.querySelectorAll(".producto");
+
+        productos.forEach(producto => {
+            const marcaProducto = producto.getAttribute("data-marca");
+
+            if (marcaProducto !== marcaSeleccionada) {
+                producto.style.display = "none"; // Oculta los que no coincidan
+            }
+        });
+
+        console.log("Productos filtrados por marca:", marcaSeleccionada);
     }
-    // Redirige al usuario a la página de resumen
-    window.location.href = "http://127.0.0.1:5500/paypal.html";
 });
-
-
-

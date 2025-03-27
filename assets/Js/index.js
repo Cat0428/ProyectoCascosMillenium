@@ -70,23 +70,77 @@ function moveSlider() {
     }
 }
 
-// Inicia el movimiento automático
-let sliderInterval = setInterval(moveSlider, 3000);
-
-// Botones de navegación
-document.querySelector('.prev').addEventListener('click', () => {
-    clearInterval(sliderInterval);
-    currentIndex = Math.max(currentIndex - 1, 0);
-    sliderTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
-    sliderInterval = setInterval(moveSlider, 3000);
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-    clearInterval(sliderInterval);
-    moveSlider();
-    sliderInterval = setInterval(moveSlider, 3000);
-});
-
 
 //----------------------- FIN SLIDER CASCOS--------------------------
 
+
+//-------------------------- FILTRADO DE LOGOS--------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedorLogos = document.querySelector(".Seccion-logos");
+
+    if (contenedorLogos) {
+        contenedorLogos.addEventListener("click", function (event) {
+            const logo = event.target.closest(".logo-brand");
+            if (logo) {
+                const marcaSeleccionada = logo.getAttribute("data-marca");
+                console.log("Marca seleccionada:", marcaSeleccionada);
+                filtrarCascosPorMarca(marcaSeleccionada);
+            }
+        });
+    }
+
+    function filtrarCascosPorMarca(marca) {
+        console.log("Filtrando cascos de la marca:", marca);
+
+        const productos = document.querySelectorAll(".producto");
+        console.log("Productos encontrados:", productos.length);
+
+        productos.forEach(producto => {
+            const marcaProducto = producto.getAttribute("data-marca");
+            console.log(`Producto: ${producto.id}, Marca: ${marcaProducto}`);
+
+            if (marcaProducto === marca) {
+                producto.style.display = "block";  // Mostrar
+                console.log(`✅ Mostrando ${producto.id}`);
+            } else {
+                producto.style.display = "none";  // Ocultar
+                console.log(`❌ Ocultando ${producto.id}`);
+            }
+        });
+    }
+});
+
+
+document.querySelectorAll(".logo-brand").forEach(logo => {
+    logo.addEventListener("click", function () {
+        const marca = this.getAttribute("data-marca");
+        console.log("Redirigiendo a productos.html con marca:", marca);
+        window.location.href = `/Pages/productos.html?marca=${encodeURIComponent(marca)}`;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const marca = params.get("marca");
+
+    if (marca) {
+        console.log("Filtrando productos de la marca:", marca);
+        filtrarCascosPorMarca(marca);
+    }
+});
+
+function filtrarCascosPorMarca(marca) {
+    const productos = document.querySelectorAll(".producto");
+
+    productos.forEach(producto => {
+        const marcaProducto = producto.getAttribute("data-marca");
+
+        if (marcaProducto === marca) {
+            producto.style.display = "block";  // Mostrar solo los de la marca
+        } else {
+            producto.style.display = "none";  // Ocultar los demás
+        }
+    });
+}
+
+//------------------ FIN FILTRADO DE LOGOS---------------------
