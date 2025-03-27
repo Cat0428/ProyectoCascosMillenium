@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><titl>Opciones de compra</titl></title>
+    <title>Opciones de compra</title>
     <link rel="stylesheet" href="/assets/Css/EstilosProductos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -20,7 +20,21 @@
             </div>
         </section>
 
+        <!--SECCION CARRITO-->
+        <section >
+            <i class="fas fa-shopping-cart"></i>
+        </section>
         
+        <div id="carrito-popup" class="oculto">
+            <h3  id="carrito-icon"></h3>
+            <ul id="lista-carrito"></ul>
+            <p><strong>Total:</strong> $<span id="total">0</span></p>
+            <button  id="cerrar-carrito" >Pagar</button> 
+        </div>
+    <!--FIN SECCION CARRITO-->
+
+    <!--SECCIÓN PRODUCTOS-->
+
         <section id="Productos">
             <div class="producto" id="casco1">
                 <img src="/assets/img/casco1.jpg" alt="casco1">
@@ -132,26 +146,23 @@
                 <p>Precio: $180.000</p>
                 <button class="btn-comprar" data-precio="180000"> Agregar al carrito</button>
             </div>
+
+            <div class="producto" id="casco13" data-marca="HJC">
+                <img src="/assets/img/cascohjc.webp" alt="casco13">
+                <h3>Casco HJC i71 Iroix </h3>
+                <p>Color: Negro y Naranja</p>
+                <p>Visera: Transparente</p>
+                <p>Precio: $1.404.000</p>
+                <button class="btn-comprar" data-precio="180000"> Agregar al carrito</button>
+            </div>
+
+
         </section><BR><BR><BR></BR></BR></BR>
-
-        <section >
-            <i class="fas fa-shopping-cart"></i>
-        </section>
-        
-        <div id="carrito-popup" class="oculto">
-            <h3  id="carrito-icon"></h3>
-            <ul id="lista-carrito"></ul>
-            <p><strong>Total:</strong> $<span id="total">0</span></p>
-            <button  id="cerrar-carrito" >Pagar</button>
-            
-        </div>
-        
-
-        
-
+    <!--FIN SECCIÓN PRODUCTOS-->
     </main>
 
 
+<!--PIE DE PAGINA-->
     <footer id="pie-pagina">
         <div class="container">
             <div class="informacion">
@@ -188,9 +199,11 @@
             <p>&copy; 2024 Tienda Cascos Milenium. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!--FIN PIE DE PAGINA-->
     
     <script src="/assets/Js/productos.js"></script><br><br><br><br>
-    
+
     
 </body>
 </html>
