@@ -183,6 +183,7 @@ main,body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto elevado */
     width: 80%; /* Ancho adaptable */
     margin: 20px auto; /* Centrar en la página */
+    margin-bottom: 60px;
 }
 
 .tipo-casco-section h1 {
@@ -191,6 +192,7 @@ main,body {
     text-transform: uppercase; /* Convertir a mayúsculas */
     color: rgb(0, 0, 0); /* Texto en color blanco */
     letter-spacing: 2px; /* Espaciado entre letras */
+    
 }
 
 
@@ -302,7 +304,7 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: -50px;
+    margin-bottom: 50px;
     background: linear-gradient(90deg, #ff8000, #ff0033);
     border-radius: 10px;
 }
@@ -447,7 +449,7 @@ h3 {
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     position: relative;
     display: flex;
     justify-content: center;

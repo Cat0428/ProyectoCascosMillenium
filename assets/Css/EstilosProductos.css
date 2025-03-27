@@ -36,6 +36,7 @@ main{
     
 }
 
+
 .producto.resaltado{
     transform: scale(1.1);
     box-shadow: 0  4px  15px rgb(0, 0, 0);

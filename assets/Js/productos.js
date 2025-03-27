@@ -63,7 +63,3 @@ botonPagar.addEventListener("click", () => {
 
 
 
-
-
-
-
