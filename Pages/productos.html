@@ -36,18 +36,57 @@
         </header>
 
 
-        <section >
-            <div class="catalogo">
-            <h2 >Catálogo</h2>
-            
+        <section class="TipoCasco">
+            <div class="tipo-casco-section">
+                <h1>COMPRA POR TIPO DE CASCO:</h1>
             </div>
         </section>
-
-        <!--SECCION CARRITO-->
-
+    
+        <div class="casco-container">
+            <a href="#integrales" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/integral.png" alt="Integrales">
+                </div>
+                <p>INTEGRALES</p>
+            </a>
         
-       
-    <!--FIN SECCION CARRITO-->
+            <a href="#abatibles" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/abatible.png" alt="Abatibles">
+                </div>
+                <p>ABATIBLES</p>
+            </a>
+        
+            <a href="#abiertos" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/abierto.png" alt="Abiertos">
+                </div>
+                <p>ABIERTOS</p>
+            </a>
+        
+            <a href="#multiproposito" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/multi.png" alt="Multipropósito">
+                </div>
+                <p>MULTIPROPÓSITO</p>
+            </a>
+        
+            <a href="#cross" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/cross.png"Cross" alt="Cross"> 
+                </div>
+                <p>CROSS</p>
+            </a>
+        
+            <a href="#modulares" class="casco">
+                <div class="icono">
+                    <img src="/assets/img/modular.png" alt="Modulares">
+                </div>
+                <p>MODULARES</p>
+            </a>
+        </div>
+    
+
 
 
     <!-- INICIO FILTRO -->
@@ -89,143 +128,241 @@
     
     
     <!-- INICIO FILTRO -->
+     <!--- SECCION CUSTOMIZACION DEL CASCO PENDIENTE A MOVER A COMPRAS----->
+
+  <!-- <section class="customization-section">
+    <h3>Personaliza tu Casco</h3>
+    <p>Selecciona las opciones a continuación para personalizar tu casco:</p>
+
+    <form id="customizationForm" class="customization-form">
+        <div class="customization-options">
+            <div class="option">
+                <label for="color">Color:</label>
+                <input type="color" id="color" class="custom-select">
+            </div>
+
+            <div class="option">
+                <label for="tamaño">Tamaño:</label>
+                <select id="tamaño" class="custom-select">
+                    <option value="pequeño">Pequeño</option>
+                    <option value="mediano">Mediano</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <label for="diseño">Diseño:</label>
+                <select id="diseño" class="custom-select">
+                    <option value="simple">Simple</option>
+                    <option value="deportivo">Deportivo</option>
+                    <option value="retro">Retro</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <label for="material">Material:</label>
+                <select id="material" class="custom-select">
+                    <option value="fibra">Fibra de carbono</option>
+                    <option value="plastico">Plástico</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <label for="visera">Visera:</label>
+                <select id="visera" class="custom-select">
+                    <option value="transparente">Transparente</option>
+                    <option value="ahumada">Ahumada</option>
+                    <option value="espejada">Espejada</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h4>Vista previa del casco:</h4>
+            <select id="estilo" name="estilo">
+                <option value="simple" data-img="simple">Simple</option>
+                <option value="deportivo" data-img="deportivo">Deportivo</option>
+                <option value="vintage" data-img="vintage">Vintage</option>
+            </select>
+
+            <img id="casco-preview" src="/assets/img/casco-simple.jpg" alt="Casco personalizable">
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="apply-btn" id="applyChanges">Aplicar cambios</button>
+            <button type="button" class="save-btn" id="saveConfiguration">Guardar configuración</button>
+        </div>
+    </section> -->
+
+<!--- SECCION CUSTOMIZACION DEL CASCO PENDIENTE A MOVER A COMPRAS----->
 
     <!--SECCIÓN PRODUCTOS-->
 
     <section class="products-container">
-        
+
         <div class="producto" id="casco1" data-marca="Tech">
             <img src="/assets/img/casco1.jpg" alt="casco1">
-            <h3>Casco Abierto Tech T-10 Solid Certificado</h3>
-            <p>Color: negro</p>
-            <p>Visera: polarizada</p>
-            <p>Precio: $80.000 </p>
+             <h3>Casco Abierto Tech T-10 Solid Certificado</h3>
+                 <div class="info">
+                    <p>Color: negro</p>
+                    <p>Visera: polarizada</p>
+                    <p>Precio: $80.000 </p>
+                 </div>
             <button class="btn-comprar" data-precio="80000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco2" data-marca="ICH">
             <img src="/assets/img/casco2.png" alt="casco2" >
-            <h3>Casco Cerrado ICH Certificado</h3>
-            <p>Color: Negro mate</p>
-            <p>Visera: polarizada</p>
-            <p>Precio: $150.000 </p>
+              <h3>Casco Cerrado ICH Certificado</h3>
+                <div class="info">
+                    <p>Color: Negro mate</p>
+                    <p>Visera: polarizada</p>
+                    <p>Precio: $150.000 </p>
+                </div>
             <button class="btn-comprar" data-precio="150000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco3" data-marca="Bell">
             <img src="/assets/img/casco3.jpg" alt="casco3" >
-            <h3>Casco BELL Qualifier Certificado</h3>
-            <p>Color: Gris</p>
-            <p>Visera: polarizada</p>
-            <p>Precio: $450.000 </p>
+               <h3>Casco BELL Qualifier Certificado</h3>
+                <div class="info">
+                    <p>Color: Gris</p>
+                    <p>Visera: polarizada</p>
+                    <p>Precio: $450.000 </p>
+                </div>
             <button class="btn-comprar" data-precio="450000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco4" data-marca="Tech">
             <img src="/assets/img/casco4.webp" alt="casco4" >
             <h3>Casco Abierto Tech T-10 Solid Certificado</h3>
-            <p>Color: Negro mate</p>
-            <p>Visera: polarizada</p>
-            <p>Precio: $140.000 </p>
+            <div class="info">
+                <p>Color: Negro mate</p>
+                <p>Visera: polarizada</p>
+                <p>Precio: $140.000 </p>
+            </div>
             <button class="btn-comprar" data-precio="140000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco5" data-marca="SMK">
             <img src="/assets/img/casco5.webp" alt="casco5">
             <h3>Casco Smk Stellar Solid Certificado</h3>
-            <p>Color: Negro mate</p>
-            <p>Visera: Transparanete</p>
-            <p>Precio: $250.000</p>
+                <div class="info">
+                    <p>Color: Negro mate</p>
+                    <p>Visera: Transparanete</p>
+                    <p>Precio: $250.000</p>
+                </div>  
             <button class="btn-comprar" data-precio="250000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco6" data-marca="Hax">
             <img src="/assets/img/casco6.webp" alt="casco6">
-            <h3>Casco Integral Hax Obsidian Snake Demon Certificado</h3>
+            <h3>Casco Integral Hax Obsidian Snake Demon </h3>
+            <div class="info">
             <p>Color: Visos dorados</p>
             <p>Visera: Polarizada </p>
             <p>Precio: $520.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="520000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco7" data-marca="Xports">
             <img src="/assets/img/casco7.webp" alt="casco7">
             <h3>Cascos Moto M67 Xports Indumentaria, Lujos Y Accesorios Certificado</h3>
+            <div class="info">
             <p>Color: Negro y purpura</p>
             <p>Visera: Oscura</p>
             <p>Precio: $260.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="260000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco8" data-marca="ICH">
             <img src="/assets/img/casco8.webp" alt="casco8" >
             <h3>Casco Moto Abatible Ich 3110 Certificado</h3>
+            <div class="info">
             <p>Color: Blanco</p>
             <p>Visera: Transparente</p>
             <p>Precio: $130.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="130000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco9" data-marca="Bell">
             <img src="/assets/img/casco9.webp" alt="casco9">
             <h3>Casco Bell Moto 10 Spherical Evade</h3>
+            <div class="info">
             <p>Color: Blanco y rojo</p>
             <p>Visera: Sin visera</p>
             <p>Precio: $550.000 </p>
+            </div>  
             <button class="btn-comprar" data-precio="550000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco10" data-marca="Hax">
             <img src="/assets/img/casco10.jpg" alt="casco10">
             <h3>Casco Moto Abatible Ece 2206 Dot Amatista Hax Certificado</h3>
+            <div class="info">
             <p>Color: Gris</p>
             <p>Visera: Transparente</p>
             <p>Precio: $320.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="320000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco11" data-marca="Biltwell">
             <img src="/assets/img/casco11.jpg" alt="casco11">
             <h3>Casco Biltwell Bonanza Open Face Moto Clásica Nuevo Dot</h3>
+            <div class="info">
             <p>Color: Gris Claro</p>
             <p>Visera: Transparanete</p>
             <p>Precio: $650.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="650000"> Agregar al carrito</button>
         </div>
     
         <div class="producto" id="casco12" data-marca="Kontrol">
             <img src="/assets/img/casco2.png" alt="casco12">
             <h3>Casco Integral Moto Kontrol M61 Russian Bear Dot Certificado </h3>
+            <div class="info">
             <p>Color: Negro</p>
             <p>Visera: Transparente</p>
             <p>Precio: $180.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="180000"> Agregar al carrito</button>
         </div>
     
         <div class="producto casco-item" id="casco13" data-marca="HJC">
             <img src="/assets/img/cascohjc.webp" alt="casco13">
             <h3>Casco HJC i71 Iroix</h3>
+            <div class="info">
             <p>Color: Negro y Naranja</p>
             <p>Visera: Transparente</p>
             <p>Precio: $1.404.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="1404000"> Agregar al carrito</button>
         </div>
 
         <div class="producto casco-item" id="casco14" data-marca="AGV">
             <img src="/assets/img/cascoagv.jpg" alt="casco14">
             <h3>CASCO INTEGRAL AGV K1 S ROSSI MUGELLO 1999</h3>
+            <div class="info">
             <p>Color: Azul y Amarillo</p>
             <p>Visera: Transparente</p>
             <p>Precio: $ 1.260.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="1260000"> Agregar al carrito</button>
         </div>
 
         <div class="producto casco-item" id="casco14" data-marca="HRO">
             <img src="/assets/img/cascohro.webp" alt="casco14">
             <h3>Casco HRO HRO-3400DV_EVO Breaks</h3>
+            <div class="info">
             <p>Color: Negro y Naranja</p>
             <p>Visera: Transparente</p>
             <p>Precio: $ 280.000</p>
+            </div>  
             <button class="btn-comprar" data-precio="280000"> Agregar al carrito</button>
         </div>
     </section>
