@@ -1,7 +1,6 @@
 /*------ INICIO BODY / MAIN---------*/
 main,body {
-    
-    /* background-color: hsl(0, 0%, 100%); */
+
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -237,40 +236,6 @@ h3 {
 
 /*------------ FIN DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
 
-
-
-.product-card {
-    text-align: center;
-    border: 10px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #fafafa;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.product-card img {
-    width: 80px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.compare-btn {
-    padding: 8px 15px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Corregido */
-}
-
-.compare-btn:hover {
-    background-color: #fa0606;
-}
 
 :root {
     --main-c: #0f0f0f4b;
