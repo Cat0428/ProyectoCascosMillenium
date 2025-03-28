@@ -7,23 +7,37 @@
     <link rel="stylesheet" href="/assets/Css/EstilosBlog.css">
 </head>
 <body>
+    
+    <!-- ===========================
+         ENCABEZADO (HEADER)
+         Contiene el logo y la barra de navegación
+    ============================ -->
     <header class="header-landing">
+        <div class="wrap-logo">
+            <!-- Logo de la empresa -->
+            <img src="/assets/img/logoEmpresa.webp" alt="Logo Empresa">
+        </div>
         <nav class="menu-header-section">
             <ul>
-                <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
-                <li><a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a></li>
-                <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quienes somos</a></li>
-                <li><a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a></li>
-                <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="QuienesSomos.html">Quienes somos</a></li>
             </ul>
         </nav>
     </header>
 
+
     <main>
         <section class="intro">
             <h2>Por qué usar casco es vital</h2>
-            <p>En Medellín, más del 55% de las muertes en accidentes de tránsito involucran motociclistas. Un casco adecuado salva vidas y reduce las lesiones graves.
-                El casco no solo es una herramienta básica de protección, sino una de las medidas más eficaces para mitigar las consecuencias de un accidente. Al reducir el impacto en la cabeza durante una colisión, ayuda a evitar lesiones graves o incluso la muerte. Además de proteger la vida de los motociclistas, el uso del casco también favorece la seguridad vial en general, alentando a los conductores a ser más conscientes de los riesgos al circular. Sin importar el contexto o la velocidad, un casco adecuado marca la diferencia entre una lesión menor y una tragedia irreversible.
+            <p>En Medellín, más del 55% de las muertes en accidentes de tránsito involucran motociclistas. 
+                Un casco adecuado salva vidas y reduce las lesiones graves. <br>
+                El casco no solo es una herramienta básica de protección, sino una de las medidas más eficaces para mitigar las consecuencias de un accidente. Al reducir 
+                el impacto en la cabeza durante una colisión, ayuda a evitar lesiones graves o incluso la muerte. Además de proteger la vida de los motociclistas, 
+                el uso del casco también favorece la seguridad vial en general, alentando a los conductores a 
+                ser más conscientes de los riesgos al circular. Sin importar el contexto o la velocidad, un casco 
+                adecuado marca la diferencia entre una lesión menor y una tragedia irreversible.
             </p>
         </section>
         <section class="stats">
@@ -64,10 +78,59 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <p>© 2024 Blog de Seguridad Vial. Todos los derechos reservados.</p>
+    <footer>
+        <div class="footer-container">
+    
+            <!-- Información de contacto -->
+            <div class="footer-section company-info">
+                <h4>Contáctanos</h4>
+                <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+                <p><strong>Email:</strong> cascosmilenium@gmail.com</p>
+                <p><strong>Dirección:</strong> Calle 123, Medellín, Colombia</p>
+            </div>
+    
+            <!-- Navegación rápida -->
+            <div class="footer-section quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <!-- Redes sociales -->
+            <div class="footer-section social-media">
+                <h4>Síguenos</h4>
+                <p>Conéctate con nosotros en redes sociales para conocer las últimas novedades y promociones.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <!-- Suscripción al boletín -->
+            <div class="footer-section newsletter">
+                <h4>Suscríbete</h4>
+                <p>Recibe noticias, ofertas y consejos directamente en tu correo.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico" required />
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Derechos reservados -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 CascosDeMoto. Todos los derechos reservados.</p>
+            <p>Diseñado con 💖 en Medellín, Colombia.</p>
+        </div>
     </footer>
 
     <script src="/assets/Js/Blog.js"></script>
 </body>
-</html>
+</html
