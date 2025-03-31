@@ -1,19 +1,23 @@
-body{
-    height: 100%;
+/*------ INICIO BODY / MAIN---------*/
+main,body {
+
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    flex-direction: column;
+    padding: 40px 10px; /* Reduce padding para mejor ajuste */
+    box-sizing: border-box;
     overflow-x: hidden; /* Evita desplazamiento horizontal */
     width: 100%;
     text-align: center; /* Asegura que el contenido en línea quede centrado */
 }
-main{
-    padding: 0px;
-    margin: 120px;
-    flex: 1;
+
+/* Contenedor general */
+.container {
+    max-width: 1200px; /* Evita que el contenido sea demasiado ancho */
+    margin: 0 auto; /* Centra el contenido */
 }
+
+/*------ FIN BODY / MAIN---------*/
 
 
 /*------------INICIO CABECERA----*/
@@ -55,104 +59,6 @@ main{
 
 /*------------ FIN ICONOS CABECERA----------- */
 /*------------FIN CABECERA----*/
-
-/* ---------- INICIO SECCION FILTRO CATEGORIA-------- */
-
-.casco-container {
-    display: flex;
-    justify-content: center;
-    gap: 110px;
-    padding: 20px;
-    flex-wrap: wrap;
-   
-}
-.tipo-casco-section h1 {
-    background: linear-gradient(90deg, #ff8000, #ff0033);
-    text-align: center;
-    font-size: 32px; /* Aumenta el tamaño del texto */
-    padding: 20px 40px; /* Más espacio interno */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    width: 90%; /* Más ancho para que destaque */
-    margin: 30px auto; /* Centrar */
-    display: block;
-    border-bottom: 5px solid black; /* Línea más gruesa */
-    padding-bottom: 15px; /* Espaciado entre texto y línea */
-    margin-top: -40;
-}
-
-
-.casco {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    width: 130px; /* Tamaño adaptable */
-   
-}
-
-.icono {
-    background-color: #dfdfdf;
-    border-radius: 50%;
-    padding: 30px;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.icono img {
-    width: 100%; /* Se adapta al contenedor */
-    max-width: 100px;
-    height: auto;
-}
-
-.casco:hover .icono {
-    transform: translateY(-8px);
-    box-shadow: 0px 8px 15px #ff6600;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .casco-container {
-        gap: 30px;
-        padding: 20px;
-    }
-
-    .casco {
-        font-size: 1rem;
-        width: 120px;
-    }
-
-    .icono {
-        padding: 20px;
-    }
-
-    .icono img {
-        max-width: 80px;
-    }
-}
-
-@media (max-width: 480px) {
-    .casco-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .casco {
-        font-size: 0.9rem;
-        width: 100px;
-    }
-
-    .icono {
-        padding: 15px;
-    }
-
-    .icono img {
-        max-width: 70px;
-    }
-}
-/*------------- FIN FILTRO CATEGORIA ---------------*/
 
 
 /*--- SECCION CUSTOMIZACION DEL CASCO PENDIENTE A MOVER A COMPRAS-----*/
@@ -289,7 +195,7 @@ input[type="range"] {
 }
 
 button {
-    background-color: rgb(255, 153, 0);
+    background-color: rgb(0, 0, 0);
     color: white;
     padding: 10px;
     border: none;
@@ -340,7 +246,7 @@ button:hover {
 
 .producto:hover {
     transform: scale(1.05);
-     box-shadow: 0px 8px 15px #ff660098;
+     box-shadow: 0px 8px 20px #00000098;
 }
 
 .producto img {
@@ -520,5 +426,7 @@ footer {
   .newsletter button:hover {
     background-color: #e67e22;
   }
+  
+
   
 
