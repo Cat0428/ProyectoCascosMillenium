@@ -67,11 +67,11 @@ main,body {
 
 /*------------------ INICIO SLIDER PORTADA-------------------*/
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 .Seleccion-Portada-Slider {
     width: 100vw;
@@ -135,8 +135,6 @@ main,body {
 .previa:hover, .Next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-
-
 
 
 /* 📱 RESPONSIVE - Ajustes para móviles */
