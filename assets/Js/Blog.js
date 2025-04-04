@@ -53,10 +53,25 @@ function processData(data) {
 
 function createChart(labels, values) {
   const ctx = document.getElementById('myChart').getContext('2d');
-  
-  // Destruir gráfico anterior
+
+  // Destruir gráfico anterior si existe
   if (chart) chart.destroy();
 
+  // Generar colores dinámicos
+  const baseColors = [
+    'rgb(150, 4, 36)',
+    'rgba(250, 158, 37, 0.7)',
+    'rgba(255, 206, 86, 0.7)',
+    'rgba(75, 192, 192, 0.7)',
+    'rgba(153, 102, 255, 0.7)',
+    'rgba(255, 159, 64, 0.7)',
+    'rgba(7, 153, 250, 0.7)'
+  ];
+
+  const backgroundColors = values.map((_, i) => baseColors[i % baseColors.length]);
+  const borderColors = backgroundColors.map(color => color.replace('0.7', '1'));
+
+  // Crear el gráfico con colores individuales por barra
   chart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -64,8 +79,8 @@ function createChart(labels, values) {
       datasets: [{
         label: 'Muertes en moto (Antioquia)',
         data: values,
-        backgroundColor: 'rgba(54, 162, 235, 0.7)',
-        borderColor: 'rgba(54, 162, 235, 1)',
+        backgroundColor: backgroundColors,
+        borderColor: borderColors,
         borderWidth: 1
       }]
     },
