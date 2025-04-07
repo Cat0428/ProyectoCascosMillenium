@@ -154,3 +154,14 @@ document.getElementById("icono-busqueda").addEventListener("click", function () 
 document.getElementById("icono-usuario").addEventListener("click", function () {
     alert("Aquí iría el menú de usuario o el inicio de sesión.");
 });
+
+
+let cartCount = 0;
+
+function addToCart(){
+    cartCount++
+    document.querySelector('.cart-count').textContent = cartCount;
+}
+ function toggleCart(){
+    alert('Aqui puedes mostrar el contenido del carrito');
+ }
