@@ -45,6 +45,11 @@ main,body {
     color: white;
     z-index: 1000;/* Asegura que esté por encima de otros elementos */
 }
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
 
 .menu-header-section ul { 
     display: flex; 
