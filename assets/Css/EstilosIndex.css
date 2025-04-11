@@ -1,82 +1,152 @@
-/*------ INICIO BODY / MAIN---------*/
-main,body {
-
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 40px 10px; /* Reduce padding para mejor ajuste */
-    box-sizing: border-box;
-    overflow-x: hidden; /* Evita desplazamiento horizontal */
-    width: 100%;
-    text-align: center; /* Asegura que el contenido en línea quede centrado */
-}
-
-/* Contenedor general */
-.container {
-    max-width: 1200px; /* Evita que el contenido sea demasiado ancho */
-    margin: 0 auto; /* Centra el contenido */
-}
-/*------ FIN BODY / MAIN---------*/
-
-/*------------INICIO SECCION CABECERA---------*/
-.NombreTienda{
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #ffffff, #ffd6b6); /* Degradado llamativo */
-    -webkit-background-clip: text;
-    color: transparent; /* Hace que solo el texto tenga el degradado */
-    text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5); /* Sombra suave */
-    letter-spacing: 6px;
-    margin-left: center; /* Para moverlo a la izquierda */
-}
-
-
-.header-landing { 
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    background: #000000;
-    color: white;
-    z-index: 1000;/* Asegura que esté por encima de otros elementos */
-}
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+:root {
+    --main-color: #000;
+    --accent-color: #ff9900;
+    --light-bg: #f9f9f9;
+    --dark-bg: #444;
+    --white: #fff;
+    --red: red;
+    --font-main: Arial, sans-serif;
   }
 
-.menu-header-section ul { 
-    display: flex; 
-    gap: 2rem; 
-    list-style: none;     
-}   
-
-.menu-header-section li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.menu-header-section li a:hover {
-    color: rgb(255, 174, 0);
-}
-/*---------------FIN SECCION CABECERA---------*/
-
-/*------------------ INICIO SLIDER PORTADA-------------------*/
-
-/* * {
+  /* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+  }
+
+
+body, main {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  padding: 1px 0px;
+  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+/*------ FIN BODY / MAIN---------*/
+
+/* ---------- Header ---------- */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+.header-landing {
+    background: black;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .menu-header-section {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo | Menú | Carrito */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .logo img {
+    height: 55px;
+  }
+
+  .logo-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to right, #fff, #ffd6b6);
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
+    text-decoration: none;
+  }
+
+  .menu-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-39%);
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--accent-color);
+  }
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: -770px;
+  }
+  
+  .user-actions i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .user-actions i:hover {
+    color: var(--accent-color, #ff9900);
+  }
+  
+  .cart-icon {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+  
+  .cart-icon:hover {
+    color: var(--accent-color);
+  }
+  
+/*------------FIN CABECERA----*/
+
+/*------------------ INICIO SLIDER PORTADA-------------------*/
+
 
 .Seleccion-Portada-Slider {
     width: 100vw;
@@ -86,7 +156,7 @@ main,body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 690px;
+    margin-top: 50px;
 }
 
 /* 🔹 Contenedor de las imágenes */
@@ -198,52 +268,6 @@ main,body {
     
 }
 
-
-
-
-/*------------ INICIO DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
-html * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-top: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-h1 {
-    font-size: 2rem;
-    text-align: center;
-
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-}
-
-h3 {
-    font-size: 2.2rem;
-}
-
-/*------------ FIN DISEÑOS HTML PARRAFOS, ENLACES. LISTA UL Y LI----------*/
-
-
-:root {
-    --main-c: #0f0f0f4b;
-    --border-r: .2rem;
-}
 
 .wrap-hero-section {
     margin-top: -650px;
@@ -662,10 +686,6 @@ cite {
 
 /*--------FIN BOTONES IMAGENES INFORMACION------------*/
 /*------- FIN FOTOS Y CARACTERISTICAS----*/
-
-
-
-
 
 footer {
     

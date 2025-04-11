@@ -11,26 +11,39 @@
 <body>
     <main>
 
-    <header class="header-landing">
-        <div class="wrap-logo">  
-            <h1 class="NombreTienda">Cascos Milenium</h1>       
-            <nav class="menu-header-section">
-                <ul>
+        <header class="header-landing">
+            <div class="header-wrapper">
+          
+              <!-- IZQUIERDA LOGO TITULO -->
+              <a href="/Pages/index.html" class="logo">
+                <img src="/assets/img/logoEmpresa.webp" alt="Cascos Milenium" />
+                <span class="logo-title">CASCOS MILENIUM</span>
+              </a>
+          
+              <!-- CENTRO MENU NAV -->
+              <nav class="menu-center">
+                <ul class="nav-links">
                     <li><a href="/Pages/productos.html">Cascos</a></li>
                     <li><a href="/Pages/QuienesSomos.html">Quiénes somos</a></li>
-                    <li><a href="/Pages/blog.html"> Blog</a></li>
+                    <li><a href="/Pages/blog.html">Blog</a></li>
                     <li><a href="/Pages/contactos.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    
-    <section class="hero-section">
-        <div class="wrap-hero-section">
-            <h1>Cascos Milenium</h1>
-        </div>
-    </section>
+              </nav>
+                <!-- DERECHA CARRITO -->
+
+              <div class="user-actions">
+                <i class="fas fa-search" id="icono-busqueda" title="Buscar"></i>
+                <i class="fas fa-user" id="icono-usuario" title="Cuenta"></i>
+                <i class="fas fa-heart" id="icono-favoritos" title="Favoritos"></i>
+              </div>
+
+              
+              <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </div>
+          
+            </div>
+          </header>
 
     <!--INICIO SLIDER PORTADA-->
     <section class="Seleccion-Portada-Slider">
