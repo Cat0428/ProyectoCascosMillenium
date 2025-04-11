@@ -48,23 +48,6 @@ botonesCoomprar.forEach((boton) =>{
 
 
 
-// // Obtener referencia al botón de pagar
-// const botonPagar = document.getElementById("pagar");
-
-// // Evento para redirigir a la página de resumen
-// botonPagar.addEventListener("click", () => {
-//     if (carrito.length === 0) {
-//         alert("Tu carrito está vacío. Agrega productos antes de continuar.");
-//         return;
-//     }
-//     // Redirige al usuario a la página de resumen
-//     window.location.href = "http://127.0.0.1:5500/paypal.html";
-// });
-
-
-// Obtener el parámetro 'marca' de la URL
-
-
 const params = new URLSearchParams(window.location.search);
 const marcaSeleccionada = params.get("marca");
 
