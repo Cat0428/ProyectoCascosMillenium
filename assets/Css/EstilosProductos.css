@@ -84,7 +84,7 @@ body, main {
   .menu-center {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-39%);
   }
 
   .nav-links {
@@ -102,6 +102,24 @@ body, main {
   
   .nav-links li a:hover {
     color: var(--accent-color);
+  }
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: -770px;
+  }
+  
+  .user-actions i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .user-actions i:hover {
+    color: var(--accent-color, #ff9900);
   }
   
   .cart-icon {
@@ -122,7 +140,10 @@ body, main {
     right: -10px;
   }
   
- 
+  .cart-icon:hover {
+    color: var(--accent-color);
+  }
+  
 
 /*------------FIN CABECERA----*/
 
