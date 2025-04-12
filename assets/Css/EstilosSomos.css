@@ -32,54 +32,122 @@ body::before {
     z-index: -1;
 }
 
-.wrap-logo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header-landing {
+  background: black;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.menu-header-section {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Logo | Menú | Carrito */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logo img {
+  height: 55px;
+}
+
+.logo-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(to right, #fff, #ffd6b6);
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
+  text-decoration: none;
+  
+}
+
+.menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-39%);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: -770px;
+}
+
+.user-actions i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.user-actions i:hover {
+  color: var(--accent-color, #ff9900);
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.cart-icon:hover {
+  color: var(--accent-color);
 }
 
 
-
-/*Logo empresa*/
-.wrap-logo img{
-    max-width: 80px;
-    height: auto;
-    display: flex;
-
-}
-
-.header-landing { 
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    background: #000000;
-    color: white;
-    z-index: 1000;/* Asegura que esté por encima de otros elementos */
-}
-
-.menu-header-section ul { 
-    display: flex; 
-    gap: 2rem; 
-    list-style: none;     
-}   
-
-.menu-header-section li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.menu-header-section li a:hover {
-    color: rgb(255, 174, 0);
-}
 
 /* Sección Quiénes Somos */
 .about-us-section {

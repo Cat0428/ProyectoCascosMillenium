@@ -60,12 +60,7 @@ function createChart(labels, values) {
   // Generar colores dinámicos
   const baseColors = [
     'rgb(150, 4, 36)',
-    'rgba(250, 158, 37, 0.7)',
-    'rgba(255, 206, 86, 0.7)',
-    'rgba(75, 192, 192, 0.7)',
-    'rgba(153, 102, 255, 0.7)',
-    'rgba(255, 159, 64, 0.7)',
-    'rgba(7, 153, 250, 0.7)'
+    'rgba(250, 158, 37, 0.7)'
   ];
 
   const backgroundColors = values.map((_, i) => baseColors[i % baseColors.length]);
@@ -77,7 +72,7 @@ function createChart(labels, values) {
     data: {
       labels: labels,
       datasets: [{
-        label: 'Muertes en moto (Antioquia)',
+        label: 'Muertes en moto 2020 (Antioquia)',
         data: values,
         backgroundColor: backgroundColors,
         borderColor: borderColors,

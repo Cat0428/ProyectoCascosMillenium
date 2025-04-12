@@ -14,20 +14,40 @@
          ENCABEZADO (HEADER)
          Contiene el logo y la barra de navegación
     ============================ -->
+   
     <header class="header-landing">
-        <div class="wrap-logo">
-            <!-- Logo de la empresa -->
-            <img src="/assets/img/logoEmpresa.webp" alt="Logo Empresa">
+        <div class="header-wrapper">
+      
+          <!-- IZQUIERDA LOGO TITULO -->
+          <a href="/Pages/index.html" class="logo">
+            <img src="/assets/img/logoEmpresa.webp" alt="Cascos Milenium" />
+            <span class="logo-title">CASCOS MILENIUM</span>
+          </a>
+      
+          <!-- CENTRO MENU NAV -->
+          <nav class="menu-center">
+            <ul class="nav-links">
+                <li><a href="/Pages/index.html">Inicio</a></li>
+                <li><a href="/Pages/QuienesSomos.html">Quiénes somos</a></li>
+                <li><a href="/Pages/blog.html">Blog</a></li>
+                <li><a href="/Pages/contactos.html">Contacto</a></li>
+          </nav>
+            <!-- DERECHA CARRITO -->
+
+          <div class="user-actions">
+            <i class="fas fa-search" id="icono-busqueda" title="Buscar"></i>
+            <i class="fas fa-user" id="icono-usuario" title="Cuenta"></i>
+            <i class="fas fa-heart" id="icono-favoritos" title="Favoritos"></i>
+          </div>
+
+          
+          <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+      
         </div>
-        <nav class="menu-header-section">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contactos.html">Contacto</a></li>
-                <li><a href="QuienesSomos.html">Quienes somos</a></li>
-            </ul>
-        </nav>
-    </header>
+      </header>
 
 
     <main>
@@ -68,7 +88,7 @@
      <p class="text-slide"></p>
      </div>-->
 
-    </select>
+
 
 
 
@@ -166,10 +186,7 @@
     </div>
 </footer>
 
-</html>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="/assets/Js/Blog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="../assets/Js/Blog.js"></script>
 </body>
 </html
