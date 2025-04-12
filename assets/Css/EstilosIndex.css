@@ -75,7 +75,9 @@ body, main {
 .menu-center {
   display: flex;
   justify-content: center;
+  margin-right: 109px;
 }
+
 
 .nav-links {
   display: flex;
