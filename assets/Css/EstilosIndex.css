@@ -29,119 +29,113 @@ body, main {
 /*------ FIN BODY / MAIN---------*/
 
 /* ---------- Header ---------- */
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 .header-landing {
-    background: black;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-  }
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+}
 
-  .menu-header-section {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Logo | Menú | Carrito */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  
-  }
+.header-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  padding: 0 0; /* Sin padding horizontal, logo e iconos pegados */
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
-  .logo img {
-    height: 55px;
-  }
 
-  .logo-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: transparent;
-    background: linear-gradient(to right, #fff, #ffd6b6);
-    -webkit-background-clip: text;
-    text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
-    text-decoration: none;
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px; /* opcional para no tocar el borde completamente */
+  text-decoration: none;
+}
 
-  .menu-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-39%);
-  }
+.logo img {
+  height: 3.70rem;
+}
 
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-  }
-  .nav-links li a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .nav-links li a:hover {
-    color: var(--accent-color);
-  }
+.logo-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(to right, #fff, #ffd6b6);
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
+}
 
-  .user-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-right: -770px;
-  }
-  
-  .user-actions i {
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .user-actions i:hover {
-    color: var(--accent-color, #ff9900);
-  }
-  
-  .cart-icon {
-    position: relative;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-  }
+/* Menú centrado visualmente */
+.menu-center {
+  display: flex;
+  justify-content: center;
+}
 
-  .cart-count {
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-  }
-  
-  .cart-icon:hover {
-    color: var(--accent-color);
-  }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Iconos totalmente alineados a la derecha */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-right: 30px; /* opcional para no pegarse 100% al borde */
+}
+
+.icon-group i,
+.cart-icon i {
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.icon-group i:hover,
+.cart-icon i:hover,
+.nav-links li a:hover {
+  color: #ff9900; /* Cambia el color cuando pasas el mouse */
+  transform: scale(1.2); /* Agranda suavemente el ícono */
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
   
 /*------------FIN CABECERA----*/
 
