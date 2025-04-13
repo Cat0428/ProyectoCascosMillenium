@@ -501,84 +501,105 @@ body, main {
 /*---------- FIN SLIDER CASCOS-----------*/
 
 /* SECCION ESTILO */
-
 .estilos-section {
-    background: #1c1c1c; /* o imagen de textura suave */
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .estilos-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .bold-text {
-    font-weight: 900;
-    font-family: 'Arial Black', sans-serif;
-  }
-  
-  .outlined-text {
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1.5px white;
-  }
-  
-  .estilos-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .tab {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 10px;
-    position: relative;
-    transition: 0.3s;
-  }
-  
-  .tab:hover,
-  .tab.active {
-    color: #e91e63;
-  }
-  
-  .tab.active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: #e91e63;
-    bottom: -5px;
-    left: 0;
-    border-radius: 4px;
-  }
-  
-  .estilos-galeria {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .estilos-galeria img {
-    width: 220px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-  }
-  
-  .estilos-galeria img:hover {
-    transform: scale(1.05);
-  }
+  background: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+
+}
+
+.estilos-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.bold-text {
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.outlined-text {
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(255, 136, 0);
+}
+
+.estilos-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.tab:hover,
+.tab.active {
+  color:  rgb(255, 136, 0);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:  rgb(255, 136, 0);
+  bottom: -5px;
+  left: 0;
+  border-radius: 4px;
+}
+
+/* Galería */
+.estilos-galeria {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.estilo-img {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.estilo-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  border-radius: 8px;
+}
+
+.img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.estilo-img:hover .img-hover {
+  opacity: 1;
+}
+
+.estilo-img:hover .img-front {
+  opacity: 0;
+}
 
 
 /*------- INICIO FOTO Y CARACTERISTICAS----*/
