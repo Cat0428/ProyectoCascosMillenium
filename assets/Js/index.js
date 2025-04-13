@@ -27,17 +27,17 @@ function resetAutoSlide() {
 
 // Eventos para los botones
 document.querySelector(".Next").addEventListener("click", () => {
-    moveSlide(1);
+    moveSlide(0);
     resetAutoSlide();
 });
 
 document.querySelector(".previa").addEventListener("click", () => {
-    moveSlide(-1);
+    moveSlide(0);
     resetAutoSlide();
 });
 
 // Cambio automático cada 5 segundos
-let autoSlide = setInterval(() => moveSlide(1), 5000);
+let autoSlide = setInterval(() => moveSlide(1), 4000);
 
 //-------------------------- FIN SLIDER PORTADA ---------------------------
 
@@ -73,42 +73,6 @@ function moveSlider() {
 
 //----------------------- FIN SLIDER CASCOS--------------------------
 
-
-//-------------------------- FILTRADO DE LOGOS--------------------
-document.addEventListener("DOMContentLoaded", function () {
-    const contenedorLogos = document.querySelector(".Seccion-logos");
-
-    if (contenedorLogos) {
-        contenedorLogos.addEventListener("click", function (event) {
-            const logo = event.target.closest(".logo-brand");
-            if (logo) {
-                const marcaSeleccionada = logo.getAttribute("data-marca");
-                console.log("Marca seleccionada:", marcaSeleccionada);
-                filtrarCascosPorMarca(marcaSeleccionada);
-            }
-        });
-    }
-
-    function filtrarCascosPorMarca(marca) {
-        console.log("Filtrando cascos de la marca:", marca);
-
-        const productos = document.querySelectorAll(".producto");
-        console.log("Productos encontrados:", productos.length);
-
-        productos.forEach(producto => {
-            const marcaProducto = producto.getAttribute("data-marca");
-            console.log(`Producto: ${producto.id}, Marca: ${marcaProducto}`);
-
-            if (marcaProducto === marca) {
-                producto.style.display = "block";  // Mostrar
-                console.log(`✅ Mostrando ${producto.id}`);
-            } else {
-                producto.style.display = "none";  // Ocultar
-                console.log(`❌ Ocultando ${producto.id}`);
-            }
-        });
-    }
-});
 
 
 document.querySelectorAll(".logo-brand").forEach(logo => {

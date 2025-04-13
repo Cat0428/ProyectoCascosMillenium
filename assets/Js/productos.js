@@ -46,19 +46,11 @@ botonesCoomprar.forEach((boton) =>{
     });
 });
 
-
-
-const params = new URLSearchParams(window.location.search);
-const marcaSeleccionada = params.get("marca");
-
-console.log("Marca seleccionada en productos.html:", marcaSeleccionada);
-
+// filtro logos flotantes
 
 document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const marcaSeleccionada = params.get("marca");
-
-    console.log("Marca seleccionada en productos.html:", marcaSeleccionada);
+const params = new URLSearchParams(window.location.search);
+const marcaSeleccionada = params.get("marca");
 
     if (marcaSeleccionada) {
         const productos = document.querySelectorAll(".producto");
@@ -147,4 +139,9 @@ function addToCart(){
 }
  function toggleCart(){
     alert('Aqui puedes mostrar el contenido del carrito');
- }
+ }  
+
+
+
+//  Seccion estilos
+
