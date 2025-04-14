@@ -143,5 +143,15 @@ function addToCart(){
 
 
 
-//  Seccion estilos
+//  icono favoritos 
+// 💡 Más adelante puedes guardar esos favoritos en localStorage o en 
+//     un sistema de usuario si tienes backend.
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.favorito i').forEach(heart => {
+      heart.addEventListener('click', () => {
+        heart.classList.toggle('active');
+      });
+    });
+  });
 
