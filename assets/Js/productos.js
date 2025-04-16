@@ -76,8 +76,8 @@ const priceRange = document.getElementById("price-range");
 const priceValue = document.getElementById("price-value");
 const buscarBtn = document.getElementById("buscar-btn");
 
-const minPrice = 390000;
-const maxPrice = 510000;
+const minPrice = 80000;
+const maxPrice = 1990000;
 
 // Inicializar valores
 priceMinInput.value = minPrice;
