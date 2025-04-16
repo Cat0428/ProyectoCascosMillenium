@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="/assets/Css/EstilosContacto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-content">
-            <h1><strong>Contáctanos</strong></h1>
-            <p>¿Tienes preguntas? ¡Estamos para ayudarte!</p>
-          
-                <ul>
-                    <a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a>
-                    <a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quienes somos</a>
-                    <a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a>
-                    <a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a>
+    <header class="header-landing">
+        <div class="header-wrapper">
+            <a href="/Pages/index.html" class="logo">
+                <img src="/assets/img/logoEmpresa.webp" alt="Cascos Milenium" />
+                <span class="logo-title">CASCOS MILENIUM</span>
+            </a>
+
+            <nav class="menu-center">
+                <ul class="nav-links">
+                    <li><a href="/Pages/index.html">Inicio</a></li>
+                    <li><a href="/Pages/productos.html">Cascos</a></li>
+                    <li><a href="/Pages/blog.html">Blog</a></li>
+                    <li><a href="/Pages/QuienesSomos.html">Quiénes somos</a></li>
                 </ul>
-           
+            </nav>
+
+            <div class="icon-group">
+                <i class="fas fa-search" title="Buscar"></i>
+                <i class="fas fa-user" title="Cuenta"></i>
+                <i class="fas fa-heart" title="Favoritos"></i>
+                <div class="cart-icon" onclick="toggleCart()" title="Carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -41,7 +57,7 @@
                 <img src="/assets/img/collage5.jpg" class="collage-image" alt="Collage Image 5">
                 <img src="/assets/img/collage6.jpg" class="collage-image" alt="Collage Image 6">
                 <img src="/assets/img/collage7.jpg" class="collage-image" alt="Collage Image 7">
-                <img src="/assets/img/collage8.jpg" class="collage-image" alt="Collage Image ">
+                <img src="/assets/img/collage8.jpg" class="collage-image" alt="Collage Image 8">
                 <img src="/assets/img/collage9.jpg" class="collage-image" alt="Collage Image 9">
                 <img src="/assets/img/collage10.jpg" class="collage-image" alt="Collage Image 10">
                 <img src="/assets/img/collage11.jpg" class="collage-image" alt="Collage Image 11">
@@ -50,38 +66,80 @@
                 <img src="/assets/img/collage14.jpg" class="collage-image" alt="Collage Image 14">
                 <img src="/assets/img/collage15.jpg" class="collage-image" alt="Collage Image 15">
                 <img src="/assets/img/collage16.jpg" class="collage-image" alt="Collage Image 16">
-               
-                
-                <section class="contact-form">
-                    <h2>Envía un mensaje</h2>
-                    <form action="/enviar-mensaje" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea name="message" id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
-                        </div>
-        
-                        <button type="submit">Enviar</button>
-                    </form>
-                </section>
             </div>
-           
+        </section>
+
+        <section class="contact-form">
+            <h2>Envía un mensaje</h2>
+            <form action="/enviar-mensaje" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
+
     <script src="/assets/Js/contacto.js"></script>
 
-    <footer class="site-footer">
-        <p>&copy; 2024 CascosMilenium. Todos los derechos reservados.</p>
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-section company-info">
+                <h4>Contáctanos</h4>
+                <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+                <p><strong>Email:</strong> cascosmilenium@gmail.com</p>
+                <p><strong>Dirección:</strong> Calle 123, Medellín, Colombia</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="http://127.0.0.1:5501/Pages/index.html">Inicio</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/productos.html">Productos</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/blog.html">Blog</a></li>
+                    <li><a href="http://127.0.0.1:5501/Pages/contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social-media">
+                <h4>Síguenos</h4>
+                <p>Conéctate con nosotros en redes sociales para conocer las últimas novedades y promociones.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h4>Suscríbete</h4>
+                <p>Recibe noticias, ofertas y consejos directamente en tu correo.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico" required />
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 CascosDeMoto. Todos los derechos reservados.</p>
+            <p>Diseñado con 💖 en Medellín, Colombia.</p>
+        </div>
     </footer>
 </body>
 </html>
-

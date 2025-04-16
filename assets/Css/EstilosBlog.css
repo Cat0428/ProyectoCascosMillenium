@@ -15,119 +15,108 @@ body {
   background-color: #121212ce; /* Fondo principal oscuro */
   color: #e0e0e0; /* Texto claro */
 }
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* ---------- Header ---------- */
 .header-landing {
-  background: black;
+  background-color: black;
   color: white;
-  padding: 10px 0;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 999;
+  padding: 10px 0;
 }
 
-.menu-header-section {
+.header-wrapper {
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Logo | Menú | Carrito */
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
+  width: 100%;
+  padding: 0 0; /* Sin padding horizontal, logo e iconos pegados */
 }
+
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 30px; /* opcional para no tocar el borde completamente */
   text-decoration: none;
 }
+
 .logo img {
-  height: 55px;
+  height: 3.70rem;
 }
 
 .logo-title {
-  font-size: 1.1rem;
   font-weight: bold;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: transparent;
   background: linear-gradient(to right, #fff, #ffd6b6);
   -webkit-background-clip: text;
   text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
-  text-decoration: none;
-  
 }
 
+/* Menú centrado visualmente */
 .menu-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-39%);
+  display: flex;
+  justify-content: center;
+  margin-right: 109px;
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
 }
+
 .nav-links li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1rem;
 }
 
-.nav-links li a:hover {
-  color: var(--accent-color);
-}
-
-.user-actions {
+/* Iconos totalmente alineados a la derecha */
+.icon-group {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-right: -770px;
+  justify-content: flex-end;
+  margin-right: 30px; /* opcional para no pegarse 100% al borde */
 }
 
-.user-actions i {
+.icon-group i,
+.cart-icon i {
+  font-size: 1.3rem;
   color: white;
-  font-size: 20px;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.user-actions i:hover {
-  color: var(--accent-color, #ff9900);
 }
 
 .cart-icon {
   position: relative;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
 }
 
 .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
   background-color: red;
   color: white;
-  border-radius: 50%;
   padding: 2px 6px;
+  border-radius: 50%;
   font-size: 12px;
-  position: absolute;
-  top: -10px;
-  right: -10px;
 }
 
-.cart-icon:hover {
-  color: var(--accent-color);
+.icon-group i:hover,
+.cart-icon i:hover,
+.nav-links li a:hover {
+  color: #ff9900; /* Cambia el color cuando pasas el mouse */
+  transform: scale(1.2); /* Agranda suavemente el ícono */
+  transition: all 0.3s ease;
 }
 
 

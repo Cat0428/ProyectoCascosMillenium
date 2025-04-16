@@ -8,52 +8,125 @@
 /* Fondo del body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #121212ce;
     padding: 0;
     margin: 0;
+
   
 }
 
-/* Header */
-.site-header {
-    background-color:#333;
-    color: #333;
-    text-align: center;
-    padding: 5px;
+
+/* ---------- Header ---------- */
+.header-landing {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
 }
 
-.site-header h1 {
-    font-size: 2.5em;
+.header-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  padding: 0 0; /* Sin padding horizontal, logo e iconos pegados */
 }
 
-.site-header p {
-    font-size: 1.2em;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px; /* opcional para no tocar el borde completamente */
+  text-decoration: none;
 }
 
-.site-header ul{
-    position: relative;
-    background-color: #fffefe00;
-    left: 1100px;
-    display: flex; /* Organiza los elementos en fila */
-    gap: 1.5rem; /* Espaciado entre los elementos */
-    list-style: none; /* Elimina los puntos de la lista */
-    margin-top: -20px;
-    padding: 0;
-    color: white;
-   
+.logo img {
+  height: 3.70rem;
 }
 
-.site-header a{
-    text-decoration: none; /* Sin subrayado */
-    color: #fffcfc; /* Color del texto */
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.logo-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(to right, #fff, #ffd6b6);
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
 }
+
+/* Menú centrado visualmente */
+.menu-center {
+  display: flex;
+  justify-content: center;
+  margin-right: 109px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Iconos totalmente alineados a la derecha */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-right: 30px; /* opcional para no pegarse 100% al borde */
+}
+
+.icon-group i,
+.cart-icon i {
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.icon-group i:hover,
+.cart-icon i:hover,
+.nav-links li a:hover {
+  color: #ff9900; /* Cambia el color cuando pasas el mouse */
+  transform: scale(1.2); /* Agranda suavemente el ícono */
+  transition: all 0.3s ease;
+}
+
+/*------------FIN CABECERA----*/
+
 
 /* Contenido principal */
 .main-content {
-    padding: 20px;
+    padding: 80px;
+  
 }
 
 /* Información de contacto */
@@ -99,7 +172,7 @@ body {
 
 /* Estilo para las imágenes del collage */
 .collage-image {
-    width: 150%; /* Las imágenes ocupan todo el ancho de su celda */
+    width: 115%; /* Las imágenes ocupan todo el ancho de su celda */
     height: 500px; /* Establece una altura fija para todas las imágenes */
     object-fit: cover; /* Hace que la imagen cubra su celda sin distorsionarse */
     border-radius: 10px; /* Bordes redondeados para un efecto más suave */
