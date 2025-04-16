@@ -1,50 +1,50 @@
-//variables
+  //modal carrito, funcionalidad del boton comprar
 
-const botonesCoomprar = document.querySelectorAll('.btn-comprar');
-const listaCarrito = document.getElementById('lista-carrito');
-const totalCarrito = document.getElementById('total');
-let total = 0;
+  const botonesComprar = document.querySelectorAll('.btn-comprar');
+  const modal = document.getElementById('modal-carrito');
+  const modalImg = document.getElementById('modal-img');
+  const modalNombre = document.getElementById('modal-nombre');
+  const modalPrecio = document.getElementById('modal-precio');
+  const totalCarrito = document.getElementById('total-carrito');
+  const cantidadTotal = document.getElementById('cantidad-total');
+  const closeBtn = document.querySelector('.close-btn')
+  
+  let total = 0;
+  let cantidad = 0;
 
-//Funcion para agregar al carrito
+  botonesComprar.forEach(boton => {
+    boton.addEventListener('click', () =>{
+        const producto = boton.closest('.producto');
+        const nombre = producto.querySelector('h3').textContent;
+        const precioTexto = producto.querySelector('.precio')?.textContent || "$0";
+        const precio = parseInt(precioTexto.replace(/\D/g, '')) || 0;
+        const imgSrc = producto.querySelector('img').src;
 
-botonesCoomprar.forEach((boton) =>{
-    boton.addEventListener('click', () => {
-        const nombreProducto = boton.parentElement.querySelector('h3').textContent;
-        const precioProducto = parseInt(boton.getAttribute('data-precio'));
+    // Actualizar modal
+    modalImg.src = imgSrc;
+    modalNombre.textContent = nombre;
+    modalPrecio.textContent = `Precio: $${precio.toLocaleString()}`;
 
-        //crear un elemento de lista para el carrito
+    // Actualizar totales
+    total += precio;
+    cantidad++;
+    totalCarrito.textContent = total.toLocaleString();
+    cantidadTotal.textContent = cantidad;
 
-        const itemCarrito = document.createElement('li');
-        itemCarrito.textContent = `${nombreProducto} - $${precioProducto}`;
-        listaCarrito.appendChild(itemCarrito);
+    modal.classList.remove('hidden');       
 
-        //actualizar el total
-        total += precioProducto;
-        totalCarrito.textContent = total.toLocaleString();
 
-    });
+    })
+  })
 
-    document.addEventListener('DOMContentLoaded', function(){
-        //obtener el ID del producto desde la url
-        const hash = window.location.hash;
-        if (hash){
-            const elemento = document.querySelector(hash);
-            //desplazar suavemente hacia el elmento 
-    
-            if(elemento){
-                elemento.scrollIntoView({behavior: 'smooth', block: 'center'});
-    
-                //resaltar temporalmente el producto
-                elemento.classList.add('resaltado');
-                setTimeout(() => {
-                    elemento.classList.remove('resaltado');
-                }, 4000);//duracion del efecto en milisegundos
-    
-           
-            }
-        }
-    });
-});
+  // Cerrar modal
+closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+document.getElementById('cart-count').textContent = cantidad;
+
+
 
 // filtro logos flotantes
 
@@ -117,7 +117,7 @@ buscarBtn.addEventListener("click", () => {
 
 //------------------ FIN FILTRO
 
-//-------------- LUPA HEADER
+//-------------- LUPA HEADER funcionalidad buscar
 
 document.getElementById("icono-busqueda").addEventListener("click", function () {
     let busqueda = prompt("¿Qué producto buscas?");
@@ -143,15 +143,4 @@ function addToCart(){
 
 
 
-//  icono favoritos 
-// 💡 Más adelante puedes guardar esos favoritos en localStorage o en 
-//     un sistema de usuario si tienes backend.
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.favorito i').forEach(heart => {
-      heart.addEventListener('click', () => {
-        heart.classList.toggle('active');
-      });
-    });
-  });
-
+  

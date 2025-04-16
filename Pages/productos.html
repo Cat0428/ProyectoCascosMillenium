@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    
     <main>
 
         <header class="header-landing">
@@ -37,10 +38,10 @@
                 <i class="fas fa-search" title="Buscar"></i>
                 <i class="fas fa-user" title="Cuenta"></i>
                 <i class="fas fa-heart" title="Favoritos"></i>
-                <div class="cart-icon" onclick="toggleCart()" title="Carrito">
-                  <i class="fas fa-shopping-cart"></i>
-                  <span class="cart-count">0</span>
-                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                  </div>
               </div>
           
             </div>
@@ -83,6 +84,10 @@
             <button id="buscar-btn">BUSCAR</button>
         </aside>
     
+
+
+       
+
     
     <!-- INICIO FILTRO -->
      <!--- SECCION CUSTOMIZACION DEL CASCO PENDIENTE A MOVER A COMPRAS----->
@@ -164,7 +169,7 @@
                  <div class="info">
                     <p>Precio: $80.000 </p>
                     <div class="favorito">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart" title="Agregar a favoritos"></i>
                     </div>
                  </div>
             <button class="btn-comprar" data-precio="80000"> Agregar al carrito</button>
@@ -325,8 +330,36 @@
             <button class="btn-comprar" data-precio="280000"> Agregar al carrito</button>
         </div>
     </section>
+
+     <!-- MODAL del carrito -->
+         
+     <div id="modal-carrito" class="modal hidden">
+        <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+            <div class="producto-modal">
+            <img id="modal-img" src="/assets/img/casco1.jpg" alt="casco1">
+            <div>
+                <h4 id="modal-nombre"></h4>
+                <p id="modal-precio"></p>
+                <p><strong>Cantidad:</strong> 1</p>
+            </div>
+            </div>
+            <div class="resumen-carrito">
+            <p>Hay <span id="cantidad-total">1</span> artículos en tu carrito.</p>
+            <p><strong>Total:</strong> $<span id="total-carrito">0</span></p>
+            <button class="btn">Continuar Comprando</button>
+            <button class="btn">Finalizar Compra</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
     <!--FIN SECCIÓN PRODUCTOS-->
     </main>
+
+    
 <!-- FOOTER -->
 <footer>
     <div class="footer-container">
