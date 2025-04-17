@@ -132,7 +132,7 @@ body {
 /* Información de contacto */
 .contact-info {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -153,12 +153,11 @@ body {
 
 /* Collage */
 .collage-section {
-    position: relative;
-    display: flex;
-    justify-content: center;   /* Centra el formulario horizontalmente */
-    align-items: center;       /* Centra el formulario verticalmente */
-    height: 100vh;             /* Hace que el contenedor ocupe toda la altura de la pantalla */
-  }
+  position: relative;         /* ✅ Muy importante para posicionar el formulario encima */
+  width: 100%;
+  min-height: 100vh;          /* Que ocupe el alto de la pantalla */
+  overflow: hidden;           /* Evita desbordes si hay imágenes muy grandes */
+}
   
   .collage-container {
     display: grid;             /* Usa Grid para las imágenes del collage */
@@ -198,7 +197,7 @@ body {
 /* Formulario de contacto */
 .contact-form {
     position: absolute;        /* El formulario se coloca encima del collage */
-    top: 65%;                   /* Centra verticalmente */
+    top: 110%;                   /* Centra verticalmente */
     left: 50%;                  /* Centra horizontalmente */
     transform: translate(-50%, -50%);  /* Ajusta el desplazamiento para el centrado exacto */
     width: 500px;              /* Ajusta el tamaño del formulario */
@@ -244,13 +243,145 @@ body {
     background-color: #038003;
   }
 
-/* Footer */
-.site-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* ===== FOOTER ===== */
+footer {
+    
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
 }
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+  
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-section  {
+  margin-bottom: 15px;
+  font-size: 18px;
+  
+}
+
+.footer-section quick-links ul a:hover{  color: rgb(255, 174, 0)
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: none;
+  color: rgb(255, 174, 0)
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/*INICIO SECCION ICONOS REDES*/
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #444;
+  padding: 1px;
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ /*INICIO SECCION ICONOS REDES*/
+ .social-iconPreguntas		
+  {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #444;
+  padding: 1px;
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #f39c12;
+  color: #fff;
+}
+/*FINAL SECCION REDES*/
+
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.newsletter button:hover {
+  background-color: #e67e22;
+}
+
