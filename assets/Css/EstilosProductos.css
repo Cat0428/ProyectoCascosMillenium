@@ -134,6 +134,26 @@ body, main {
   transition: all 0.3s ease;
 }
 
+.cart-summary {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  z-index: 1000;
+}
+
+.cart-summary.show {
+  display: block;
+}
+
+
 /*------------FIN CABECERA----*/
 
 

@@ -38,10 +38,13 @@
                 <i class="fas fa-search" title="Buscar"></i>
                 <i class="fas fa-user" title="Cuenta"></i>
                 <i class="fas fa-heart" title="Favoritos"></i>
-                <div class="cart-icon">
+                <div class="cart-icon" id="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
                     <span id="cart-count">0</span>
-                  </div>
+                    <div id="cart-summary" class="cart-summary hidden">
+                      <p>Tu carrito está vacío</p>
+                    </div>
+                </div>
               </div>
           
             </div>
@@ -348,8 +351,8 @@
             <div class="resumen-carrito">
             <p>Hay <span id="cantidad-total">1</span> artículos en tu carrito.</p>
             <p><strong>Total:</strong> $<span id="total-carrito">0</span></p>
-            <button class="btn">Continuar Comprando</button>
-            <button class="btn">Finalizar Compra</button>
+            <button id="continuar-comprando" class="btn">Continuar Comprando</button>
+            <button id="finalizar-compra" class="btn">Finalizar Compra</button>
             </div>
         </div>
         </div>
