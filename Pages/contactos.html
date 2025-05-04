@@ -26,16 +26,24 @@
                 </ul>
             </nav>
 
-            <div class="icon-group">
-                <i class="fas fa-search" title="Buscar"></i>
-                <i class="fas fa-user" title="Cuenta"></i>
-                <i class="fas fa-heart" title="Favoritos"></i>
-                <div class="cart-icon" onclick="toggleCart()" title="Carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
-            </div>
-        </div>
+           <!-- Grupo de íconos -->
+              <div class="icon-group">
+               <!-- Caja de búsqueda (insertada dentro del grupo para alinearla con los íconos) -->
+                 <div id="search-box">
+                 <input type="text" placeholder="Buscar..." id="search-input" />
+                 <button id="search-button">Buscar</button>
+             </div>
+  
+                 <i class="fas fa-search" title="Buscar"></i>
+                 <i class="fas fa-user" title="Cuenta"></i>
+                 <i class="fas fa-heart" title="Favoritos"></i>
+                 <div class="cart-icon" onclick="toggleCart()" title="Carrito">
+                 <i class="fas fa-shopping-cart"></i>
+                  <span class="cart-count">0</span>
+          </div>
+     </div>
+  
+ </div>
     </header>
 
     <main class="main-content">

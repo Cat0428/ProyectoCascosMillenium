@@ -101,7 +101,7 @@ body {
 }
 
 .cart-count {
-  position: absolute;
+  position: relative;
   top: -8px;
   right: -10px;
   background-color: red;
@@ -118,7 +118,62 @@ body {
   transform: scale(1.2); /* Agranda suavemente el ícono */
   transition: all 0.3s ease;
 }
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
 
+#search-box {
+  display: none;
+  position: absolute;
+  left: 72%; /* Ajusta según necesidad */
+  top: 10px;
+  background-color: transparent; /* Quita el fondo oscuro */
+  padding: 0;
+  border: none; /* Elimina el borde externo */
+  box-shadow: none; /* Elimina la sombra externa */
+  display: flex; /* Coloca input y botón en línea */
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+#search-input {
+  padding: 5px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+#search-box button {
+  padding: 5px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
 
 /* ===== MAIN CONTENT ===== */
 main {
@@ -397,7 +452,7 @@ footer {
 }
 
 .newsletter input {
-  flex: 1;
+  flex: auto;
   padding: 8px;
   border: none;
   border-radius: 4px;

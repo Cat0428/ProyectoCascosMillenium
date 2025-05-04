@@ -1,44 +1,47 @@
 // Configuración global
 let chart = null;
-const API_URL = "https://www.datos.gov.co/resource/th2j-fh7f.json";
+const API_URL = "https://datosabiertos.metropol.gov.co/dataset/f2c142b3-b5c1-4c62-9902-797f04aee252/api";
 
-// Función principal
+// Función principal para cargar y procesar la gráfica
 async function loadChart() {
   try {
-    // 1. Cargar datos
+    // 1. Cargar datos de la API
     const response = await fetch(API_URL);
     const rawData = await response.json();
-    
-    console.log("Datos brutos:", rawData); // Verifica en consola
 
-    // 2. Filtrar datos (versión robusta)
-    const filteredData = rawData.filter(item => {
-      const depto = item.departamento_nombre?.toUpperCase() || '';
-      const vehiculo = item.clase?.toUpperCase() || '';
+    console.log("Datos brutos:", rawData);
+
+    // 2. Extraer el array de registros
+    const records = rawData.result.records;
+
+    // 3. Filtrar datos: solo accidentes en Antioquia con motocicletas
+    const filteredData = records.filter(item => {
+      const depto = item.departamento?.toUpperCase() || '';
+      const vehiculo = item.tipo_vehiculo?.toUpperCase() || '';
       return depto.includes("ANTIOQUIA") && vehiculo.includes("MOTOCICLETA");
     });
 
     console.log("Datos filtrados:", filteredData);
 
-    // 3. Si no hay datos, mostrar demo
+    // 4. Si no hay datos, usar datos de demostración
     if (filteredData.length === 0) {
       console.warn("Usando datos demo");
       showDemoChart();
       return;
     }
 
-    // 4. Procesar datos reales
+    // 5. Procesar datos reales
     processData(filteredData);
-    
+
   } catch (error) {
-    console.error("Error:", error);
-    showDemoChart(); // Mostrar gráfico demo en caso de error
+    console.error("Error cargando datos:", error);
+    showDemoChart();
   }
 }
 
+// Procesar los datos filtrados para graficar
 function processData(data) {
-  // Extraer años y valores
-  const years = data.map(item => item.año || "Año no especificado");
+  const years = data.map(item => item.año || "Sin año");
   const deaths = data.map(item => {
     const num = parseInt(item.total_muertes || "0");
     return isNaN(num) ? 0 : num;
@@ -47,32 +50,25 @@ function processData(data) {
   console.log("Años:", years);
   console.log("Muertes:", deaths);
 
-  // Crear gráfico
   createChart(years, deaths);
 }
 
+// Crear la gráfica
 function createChart(labels, values) {
   const ctx = document.getElementById('myChart').getContext('2d');
 
-  // Destruir gráfico anterior si existe
-  if (chart) chart.destroy();
+  if (chart) chart.destroy(); // Destruir el gráfico anterior si existe
 
-  // Generar colores dinámicos
-  const baseColors = [
-    'rgb(150, 4, 36)',
-    'rgba(250, 158, 37, 0.7)'
-  ];
-
+  const baseColors = ['rgb(150, 4, 36)', 'rgba(250, 158, 37, 0.7)'];
   const backgroundColors = values.map((_, i) => baseColors[i % baseColors.length]);
   const borderColors = backgroundColors.map(color => color.replace('0.7', '1'));
 
-  // Crear el gráfico con colores individuales por barra
   chart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: labels,
       datasets: [{
-        label: 'Muertes en moto 2020 (Antioquia)',
+        label: 'Muertes en Moto (Antioquia)',
         data: values,
         backgroundColor: backgroundColors,
         borderColor: borderColors,
@@ -80,7 +76,7 @@ function createChart(labels, values) {
       }]
     },
     options: {
-      responsive: false,
+      responsive: true,
       scales: {
         y: {
           beginAtZero: true
@@ -90,7 +86,7 @@ function createChart(labels, values) {
   });
 }
 
-// Función de respaldo (si no hay datos)
+// Mostrar un gráfico de demostración si falla la carga
 function showDemoChart() {
   const demoData = [
     { año: "2020", total_muertes: "15" },
@@ -99,7 +95,7 @@ function showDemoChart() {
   processData(demoData);
 }
 
-// Event listeners
+// Cambiar tipo de gráfico dinámicamente
 document.getElementById('tipoGrafico').addEventListener('change', (e) => {
   if (chart) {
     chart.config.type = e.target.value;
@@ -107,5 +103,49 @@ document.getElementById('tipoGrafico').addEventListener('change', (e) => {
   }
 });
 
-// Iniciar al cargar la página
+// Iniciar cuando el documento esté cargado
 document.addEventListener('DOMContentLoaded', loadChart);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchIcon = document.querySelector('.fa-search');
+  const searchBox = document.getElementById('search-box');
+  const searchInput = document.getElementById('search-input');
+
+  // Mostrar/ocultar caja de búsqueda al hacer clic en la lupa
+  searchIcon.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que se cierre al hacer clic en la lupa
+    if (searchBox.style.display === 'none' || searchBox.style.display === '') {
+      searchBox.style.display = 'flex';
+      searchInput.focus();
+    } else {
+      searchBox.style.display = 'none';
+    }
+  });
+
+  // Buscar al presionar Enter
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  });
+
+  // Función para buscar
+  window.performSearch = function() {
+    const query = searchInput.value.trim();
+    if (query) {
+      alert('Buscando: ' + query);
+    }
+  };
+
+  // Cerrar búsqueda al hacer clic fuera del cuadro
+  document.addEventListener('click', (e) => {
+    if (!searchBox.contains(e.target) && e.target !== searchIcon) {
+      searchBox.style.display = 'none';
+    }
+  });
+});
+
+// Simulación de función carrito (opcional)
+function toggleCart() {
+  alert('Carrito abierto');
+}
